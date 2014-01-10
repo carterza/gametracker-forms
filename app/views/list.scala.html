@@ -1,0 +1,84 @@
+@(wantedGames: List[Game], ownedGames: List[Game])
+
+@import helper._
+
+@**************************************
+* Helper for generating table headers *
+**************************************@
+@header(key:String, title:String) = {
+    <th class="@key.replace(".","_")">
+        <a href="@routes.Games.list()">@title</a>
+    </th>
+}
+
+@main {
+    
+    <h1>@Messages("wantedGames.list.title", wantedGames.size)</h1>
+    
+    @if(flash.containsKey("success")) {
+        <div class="alert-message warning">
+            <strong>Done!</strong> @flash.get("success")
+        </div>
+    } 
+
+    <div id="actions">
+        <a class="btn success" id="add" href="@routes.Games.create()">Add a new game</a>
+    </div>
+    
+    @if(wantedGames.size == 0) {
+        <div class="well">
+            <em>Nothing to display</em>
+        </div>
+    } else {
+        <table class="games zebra-striped">
+            <thead>
+                <tr>
+                    @header("title", "Game title")
+                    @header("votes", "Votes")
+                    @header("vote", "")
+                </tr>
+            </thead>
+            <tbody>
+
+                @for(game <- wantedGames) {
+                    <tr>
+                        <td><a href="@routes.Games.edit(game.id)">@game.title</a></td>
+                        <td>@game.votes.size</td>
+                        <td>
+                        @form(routes.Games.vote(game.id)) {
+                            <input type="submit" value="Vote for this game" class="btn primary">
+                        }
+                }
+
+            </tbody>
+        </table>
+    }
+    
+    <h1 id="">@Messages("ownedGames.list.title", ownedGames.size)</h1>
+    
+    @if(ownedGames.size == 0) {
+        <div class="well">
+            <em>Nothing to display</em>
+        </div>
+    } else {
+        <table class="games zebra-striped">
+            <thead>
+                <tr>
+                    @header("title", "Game title")
+                </tr>
+            </thead>
+            <tbody>
+
+                @for(game <- ownedGames) {
+                    <tr>
+                        <td><a href="">@game.title</a></td>
+                    </tr>
+                }
+
+            </tbody>
+        </table>
+    }
+    
+}
+
+            
