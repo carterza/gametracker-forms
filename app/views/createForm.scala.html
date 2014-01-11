@@ -1,10 +1,10 @@
-@(gameForm: Form[Game])
+@(gameForm: Form[Game], user: User)
 
 @import helper._
 
 @implicitFieldConstructor = @{ FieldConstructor(twitterBootstrapInput.render) } 
 
-@main {
+@main(user) {
     
     <h1>Add a game</h1>
     

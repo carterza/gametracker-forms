@@ -1,8 +1,8 @@
 [0m[[0mdebug[0m] [0mCopy resource mappings: [0m
-[0m[[0mdebug[0m] [0m	(D:\Projects\computer-database\conf\application.conf,D:\Projects\computer-database\target\scala-2.10\classes\application.conf)[0m
-[0m[[0mdebug[0m] [0m	(D:\Projects\computer-database\conf\evolutions,D:\Projects\computer-database\target\scala-2.10\classes\evolutions)[0m
-[0m[[0mdebug[0m] [0m	(D:\Projects\computer-database\conf\initial-data.yml,D:\Projects\computer-database\target\scala-2.10\classes\initial-data.yml)[0m
-[0m[[0mdebug[0m] [0m	(D:\Projects\computer-database\conf\messages,D:\Projects\computer-database\target\scala-2.10\classes\messages)[0m
-[0m[[0mdebug[0m] [0m	(D:\Projects\computer-database\conf\routes,D:\Projects\computer-database\target\scala-2.10\classes\routes)[0m
-[0m[[0mdebug[0m] [0m	(D:\Projects\computer-database\conf\evolutions\default,D:\Projects\computer-database\target\scala-2.10\classes\evolutions\default)[0m
-[0m[[0mdebug[0m] [0m	(D:\Projects\computer-database\conf\evolutions\default\1.sql,D:\Projects\computer-database\target\scala-2.10\classes\evolutions\default\1.sql)[0m
+[0m[[0mdebug[0m] [0m	(D:\Projects\gametracker-forms\conf\application.conf,D:\Projects\gametracker-forms\target\scala-2.10\classes\application.conf)[0m
+[0m[[0mdebug[0m] [0m	(D:\Projects\gametracker-forms\conf\evolutions,D:\Projects\gametracker-forms\target\scala-2.10\classes\evolutions)[0m
+[0m[[0mdebug[0m] [0m	(D:\Projects\gametracker-forms\conf\initial-data.yml,D:\Projects\gametracker-forms\target\scala-2.10\classes\initial-data.yml)[0m
+[0m[[0mdebug[0m] [0m	(D:\Projects\gametracker-forms\conf\messages,D:\Projects\gametracker-forms\target\scala-2.10\classes\messages)[0m
+[0m[[0mdebug[0m] [0m	(D:\Projects\gametracker-forms\conf\routes,D:\Projects\gametracker-forms\target\scala-2.10\classes\routes)[0m
+[0m[[0mdebug[0m] [0m	(D:\Projects\gametracker-forms\conf\evolutions\default,D:\Projects\gametracker-forms\target\scala-2.10\classes\evolutions\default)[0m
+[0m[[0mdebug[0m] [0m	(D:\Projects\gametracker-forms\conf\evolutions\default\1.sql,D:\Projects\gametracker-forms\target\scala-2.10\classes\evolutions\default\1.sql)[0m

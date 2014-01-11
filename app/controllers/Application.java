@@ -1,20 +1,15 @@
 package controllers;
 
-import play.Logger;
-import play.Routes;
+import play.*;
 import play.mvc.*;
 import play.data.*;
 import static play.data.Form.*;
 
+import models.*;
 import views.html.*;
 
-import models.*;
-
-/**
- * Manage a database of games
- */
 public class Application extends Controller {
-    
+  
     // -- Authentication
     
     public static class Login {
@@ -23,7 +18,6 @@ public class Application extends Controller {
         public String password;
         
         public String validate() {
-            Logger.info("Validating with " + email + " " + password);
             if(User.authenticate(email, password) == null) {
                 return "Invalid user or password";
             }

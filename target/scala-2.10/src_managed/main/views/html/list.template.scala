@@ -20,112 +20,110 @@ import play.api.data.Field
 import play.mvc.Http.Context.Implicit._
 import views.html._
 /**/
-object list extends BaseScalaTemplate[play.api.templates.HtmlFormat.Appendable,Format[play.api.templates.HtmlFormat.Appendable]](play.api.templates.HtmlFormat) with play.api.templates.Template2[List[Game],List[Game],play.api.templates.HtmlFormat.Appendable] {
+object list extends BaseScalaTemplate[play.api.templates.HtmlFormat.Appendable,Format[play.api.templates.HtmlFormat.Appendable]](play.api.templates.HtmlFormat) with play.api.templates.Template3[List[Game],List[Game],User,play.api.templates.HtmlFormat.Appendable] {
 
     /**/
-    def apply/*1.2*/(wantedGames: List[Game], ownedGames: List[Game]):play.api.templates.HtmlFormat.Appendable = {
+    def apply/*1.2*/(wantedGames: List[Game], ownedGames: List[Game], user: User):play.api.templates.HtmlFormat.Appendable = {
         _display_ {import helper._
 
 def /*8.2*/header/*8.8*/(key:String, title:String):play.api.templates.HtmlFormat.Appendable = {_display_(
 
 Seq[Any](format.raw/*8.38*/("""
-    <th class=""""),_display_(Seq[Any](/*9.17*/key/*9.20*/.replace(".","_"))),format.raw/*9.37*/("""">
-        <a href=""""),_display_(Seq[Any](/*10.19*/routes/*10.25*/.Games.list())),format.raw/*10.38*/("""">"""),_display_(Seq[Any](/*10.41*/title)),format.raw/*10.46*/("""</a>
-    </th>
+    <th class=""""),_display_(Seq[Any](/*9.17*/key/*9.20*/.replace(".","_"))),format.raw/*9.37*/("""">"""),_display_(Seq[Any](/*9.40*/title)),format.raw/*9.45*/("""</th>
 """)))};
-Seq[Any](format.raw/*1.51*/("""
+Seq[Any](format.raw/*1.63*/("""
 
 """),format.raw/*4.1*/("""
 """),format.raw/*7.40*/("""
-"""),format.raw/*12.2*/("""
+"""),format.raw/*10.2*/("""
 
-"""),_display_(Seq[Any](/*14.2*/main/*14.6*/ {_display_(Seq[Any](format.raw/*14.8*/("""
+"""),_display_(Seq[Any](/*12.2*/main(user)/*12.12*/ {_display_(Seq[Any](format.raw/*12.14*/("""
     
-    <h1>"""),_display_(Seq[Any](/*16.10*/Messages("wantedGames.list.title", wantedGames.size))),format.raw/*16.62*/("""</h1>
+    <h1 class="text-info">"""),_display_(Seq[Any](/*14.28*/Messages("wantedGames.list.title", wantedGames.size))),format.raw/*14.80*/("""</h1>
     
-    """),_display_(Seq[Any](/*18.6*/if(flash.containsKey("success"))/*18.38*/ {_display_(Seq[Any](format.raw/*18.40*/("""
-        <div class="alert-message warning">
-            <strong>Done!</strong> """),_display_(Seq[Any](/*20.37*/flash/*20.42*/.get("success"))),format.raw/*20.57*/("""
-        </div>
-    """)))})),format.raw/*22.6*/(""" 
+    """),_display_(Seq[Any](/*16.6*/if(flash.containsKey("success"))/*16.38*/ {_display_(Seq[Any](format.raw/*16.40*/("""
+      <div class="alert alert-success">
+          <strong>Success!</strong> """),_display_(Seq[Any](/*18.38*/flash/*18.43*/.get("success"))),format.raw/*18.58*/("""
+      </div>
+    """)))})),format.raw/*20.6*/(""" 
 
     <div id="actions">
-        <a class="btn success" id="add" href=""""),_display_(Seq[Any](/*25.48*/routes/*25.54*/.Games.create())),format.raw/*25.69*/("""">Add a new game</a>
+        <a class="btn btn-success" id="add" href=""""),_display_(Seq[Any](/*23.52*/routes/*23.58*/.Games.create())),format.raw/*23.73*/("""">Add a new game</a>
     </div>
     
-    """),_display_(Seq[Any](/*28.6*/if(wantedGames.size == 0)/*28.31*/ {_display_(Seq[Any](format.raw/*28.33*/("""
+    """),_display_(Seq[Any](/*26.6*/if(wantedGames.size == 0)/*26.31*/ {_display_(Seq[Any](format.raw/*26.33*/("""
         <div class="well">
             <em>Nothing to display</em>
         </div>
-    """)))}/*32.7*/else/*32.12*/{_display_(Seq[Any](format.raw/*32.13*/("""
-        <table class="games zebra-striped">
+    """)))}/*30.7*/else/*30.12*/{_display_(Seq[Any](format.raw/*30.13*/("""
+        <table class="games table table-striped">
             <thead>
                 <tr>
-                    """),_display_(Seq[Any](/*36.22*/header("title", "Game title"))),format.raw/*36.51*/("""
-                    """),_display_(Seq[Any](/*37.22*/header("votes", "Votes"))),format.raw/*37.46*/("""
-                    """),_display_(Seq[Any](/*38.22*/header("vote", ""))),format.raw/*38.40*/("""
+                    """),_display_(Seq[Any](/*34.22*/header("title", "Game title"))),format.raw/*34.51*/("""
+                    """),_display_(Seq[Any](/*35.22*/header("votes", "Votes"))),format.raw/*35.46*/("""
+                    """),_display_(Seq[Any](/*36.22*/header("vote", ""))),format.raw/*36.40*/("""
                 </tr>
             </thead>
             <tbody>
 
-                """),_display_(Seq[Any](/*43.18*/for(game <- wantedGames) yield /*43.42*/ {_display_(Seq[Any](format.raw/*43.44*/("""
+                """),_display_(Seq[Any](/*41.18*/for(game <- wantedGames) yield /*41.42*/ {_display_(Seq[Any](format.raw/*41.44*/("""
                     <tr>
-                        <td><a href=""""),_display_(Seq[Any](/*45.39*/routes/*45.45*/.Games.edit(game.id))),format.raw/*45.65*/("""">"""),_display_(Seq[Any](/*45.68*/game/*45.72*/.title)),format.raw/*45.78*/("""</a></td>
-                        <td>"""),_display_(Seq[Any](/*46.30*/game/*46.34*/.votes.size)),format.raw/*46.45*/("""</td>
+                        <td><a href=""""),_display_(Seq[Any](/*43.39*/routes/*43.45*/.Games.edit(game.id))),format.raw/*43.65*/("""">"""),_display_(Seq[Any](/*43.68*/game/*43.72*/.title)),format.raw/*43.78*/("""</a></td>
+                        <td><span class="badge">"""),_display_(Seq[Any](/*44.50*/game/*44.54*/.votes.size)),format.raw/*44.65*/("""</span></td>
                         <td>
-                        """),_display_(Seq[Any](/*48.26*/form(routes.Games.vote(game.id))/*48.58*/ {_display_(Seq[Any](format.raw/*48.60*/("""
-                            <input type="submit" value="Vote for this game" class="btn primary">
-                        """)))})),format.raw/*50.26*/("""
-                """)))})),format.raw/*51.18*/("""
+                        """),_display_(Seq[Any](/*46.26*/form(routes.Games.vote(game.id))/*46.58*/ {_display_(Seq[Any](format.raw/*46.60*/("""
+                            <input type="submit" value="Vote for this game" class="btn btn-default">
+                        """)))})),format.raw/*48.26*/("""
+                """)))})),format.raw/*49.18*/("""
 
             </tbody>
         </table>
-    """)))})),format.raw/*55.6*/("""
+    """)))})),format.raw/*53.6*/("""
     
-    <h1 id="">"""),_display_(Seq[Any](/*57.16*/Messages("ownedGames.list.title", ownedGames.size))),format.raw/*57.66*/("""</h1>
+    <h1 class="text-info">"""),_display_(Seq[Any](/*55.28*/Messages("ownedGames.list.title", ownedGames.size))),format.raw/*55.78*/("""</h1>
     
-    """),_display_(Seq[Any](/*59.6*/if(ownedGames.size == 0)/*59.30*/ {_display_(Seq[Any](format.raw/*59.32*/("""
+    """),_display_(Seq[Any](/*57.6*/if(ownedGames.size == 0)/*57.30*/ {_display_(Seq[Any](format.raw/*57.32*/("""
         <div class="well">
             <em>Nothing to display</em>
         </div>
-    """)))}/*63.7*/else/*63.12*/{_display_(Seq[Any](format.raw/*63.13*/("""
-        <table class="games zebra-striped">
+    """)))}/*61.7*/else/*61.12*/{_display_(Seq[Any](format.raw/*61.13*/("""
+        <table class="games table table-striped">
             <thead>
                 <tr>
-                    """),_display_(Seq[Any](/*67.22*/header("title", "Game title"))),format.raw/*67.51*/("""
+                    """),_display_(Seq[Any](/*65.22*/header("title", "Game title"))),format.raw/*65.51*/("""
                 </tr>
             </thead>
             <tbody>
 
-                """),_display_(Seq[Any](/*72.18*/for(game <- ownedGames) yield /*72.41*/ {_display_(Seq[Any](format.raw/*72.43*/("""
+                """),_display_(Seq[Any](/*70.18*/for(game <- ownedGames) yield /*70.41*/ {_display_(Seq[Any](format.raw/*70.43*/("""
                     <tr>
-                        <td><a href="">"""),_display_(Seq[Any](/*74.41*/game/*74.45*/.title)),format.raw/*74.51*/("""</a></td>
+                        <td><a href="">"""),_display_(Seq[Any](/*72.41*/game/*72.45*/.title)),format.raw/*72.51*/("""</a></td>
                     </tr>
-                """)))})),format.raw/*76.18*/("""
+                """)))})),format.raw/*74.18*/("""
 
             </tbody>
         </table>
-    """)))})),format.raw/*80.6*/("""
+    """)))})),format.raw/*78.6*/("""
     
-""")))})),format.raw/*82.2*/("""
+""")))})),format.raw/*80.2*/("""
 
             """))}
     }
     
-    def render(wantedGames:List[Game],ownedGames:List[Game]): play.api.templates.HtmlFormat.Appendable = apply(wantedGames,ownedGames)
+    def render(wantedGames:List[Game],ownedGames:List[Game],user:User): play.api.templates.HtmlFormat.Appendable = apply(wantedGames,ownedGames,user)
     
-    def f:((List[Game],List[Game]) => play.api.templates.HtmlFormat.Appendable) = (wantedGames,ownedGames) => apply(wantedGames,ownedGames)
+    def f:((List[Game],List[Game],User) => play.api.templates.HtmlFormat.Appendable) = (wantedGames,ownedGames,user) => apply(wantedGames,ownedGames,user)
     
     def ref: this.type = this
 
 }
                 /*
                     -- GENERATED --
-                    DATE: Fri Jan 10 16:20:57 EST 2014
-                    SOURCE: D:/Projects/computer-database/app/views/list.scala.html
-                    HASH: 3cbb190a7877b01561f2bea148748f662c936232
-                    MATRIX: 788->1|931->198|944->204|1054->234|1107->252|1118->255|1156->272|1214->294|1229->300|1264->313|1303->316|1330->321|1387->50|1417->72|1446->195|1475->339|1515->344|1527->348|1566->350|1619->367|1693->419|1746->437|1787->469|1827->471|1946->554|1960->559|1997->574|2051->597|2163->673|2178->679|2215->694|2295->739|2329->764|2369->766|2479->859|2492->864|2531->865|2678->976|2729->1005|2788->1028|2834->1052|2893->1075|2933->1093|3056->1180|3096->1204|3136->1206|3238->1272|3253->1278|3295->1298|3334->1301|3347->1305|3375->1311|3451->1351|3464->1355|3497->1366|3595->1428|3636->1460|3676->1462|3833->1587|3884->1606|3964->1655|4023->1678|4095->1728|4148->1746|4181->1770|4221->1772|4331->1865|4344->1870|4383->1871|4530->1982|4581->2011|4704->2098|4743->2121|4783->2123|4887->2191|4900->2195|4928->2201|5015->2256|5095->2305|5135->2314
-                    LINES: 26->1|29->8|29->8|31->8|32->9|32->9|32->9|33->10|33->10|33->10|33->10|33->10|36->1|38->4|39->7|40->12|42->14|42->14|42->14|44->16|44->16|46->18|46->18|46->18|48->20|48->20|48->20|50->22|53->25|53->25|53->25|56->28|56->28|56->28|60->32|60->32|60->32|64->36|64->36|65->37|65->37|66->38|66->38|71->43|71->43|71->43|73->45|73->45|73->45|73->45|73->45|73->45|74->46|74->46|74->46|76->48|76->48|76->48|78->50|79->51|83->55|85->57|85->57|87->59|87->59|87->59|91->63|91->63|91->63|95->67|95->67|100->72|100->72|100->72|102->74|102->74|102->74|104->76|108->80|110->82
+                    DATE: Fri Jan 10 20:42:31 EST 2014
+                    SOURCE: D:/Projects/gametracker-forms/app/views/list.scala.html
+                    HASH: 9c4d68e124db72b1fb14802568b0d2263ff28a7b
+                    MATRIX: 793->1|948->210|961->216|1071->246|1124->264|1135->267|1173->284|1211->287|1237->292|1284->62|1314->84|1343->207|1372->300|1412->305|1431->315|1471->317|1542->352|1616->404|1669->422|1710->454|1750->456|1866->536|1880->541|1917->556|1969->577|2085->657|2100->663|2137->678|2217->723|2251->748|2291->750|2401->843|2414->848|2453->849|2606->966|2657->995|2716->1018|2762->1042|2821->1065|2861->1083|2984->1170|3024->1194|3064->1196|3166->1262|3181->1268|3223->1288|3262->1291|3275->1295|3303->1301|3399->1361|3412->1365|3445->1376|3550->1445|3591->1477|3631->1479|3792->1608|3843->1627|3923->1676|3994->1711|4066->1761|4119->1779|4152->1803|4192->1805|4302->1898|4315->1903|4354->1904|4507->2021|4558->2050|4681->2137|4720->2160|4760->2162|4864->2230|4877->2234|4905->2240|4992->2295|5072->2344|5112->2353
+                    LINES: 26->1|29->8|29->8|31->8|32->9|32->9|32->9|32->9|32->9|34->1|36->4|37->7|38->10|40->12|40->12|40->12|42->14|42->14|44->16|44->16|44->16|46->18|46->18|46->18|48->20|51->23|51->23|51->23|54->26|54->26|54->26|58->30|58->30|58->30|62->34|62->34|63->35|63->35|64->36|64->36|69->41|69->41|69->41|71->43|71->43|71->43|71->43|71->43|71->43|72->44|72->44|72->44|74->46|74->46|74->46|76->48|77->49|81->53|83->55|83->55|85->57|85->57|85->57|89->61|89->61|89->61|93->65|93->65|98->70|98->70|98->70|100->72|100->72|100->72|102->74|106->78|108->80
                     -- GENERATED --
                 */
             

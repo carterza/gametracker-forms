@@ -20,19 +20,19 @@ import play.api.data.Field
 import play.mvc.Http.Context.Implicit._
 import views.html._
 /**/
-object createForm extends BaseScalaTemplate[play.api.templates.HtmlFormat.Appendable,Format[play.api.templates.HtmlFormat.Appendable]](play.api.templates.HtmlFormat) with play.api.templates.Template1[Form[Game],play.api.templates.HtmlFormat.Appendable] {
+object createForm extends BaseScalaTemplate[play.api.templates.HtmlFormat.Appendable,Format[play.api.templates.HtmlFormat.Appendable]](play.api.templates.HtmlFormat) with play.api.templates.Template2[Form[Game],User,play.api.templates.HtmlFormat.Appendable] {
 
     /**/
-    def apply/*1.2*/(gameForm: Form[Game]):play.api.templates.HtmlFormat.Appendable = {
+    def apply/*1.2*/(gameForm: Form[Game], user: User):play.api.templates.HtmlFormat.Appendable = {
         _display_ {import helper._
 
 implicit def /*5.2*/implicitFieldConstructor/*5.26*/ = {{ FieldConstructor(twitterBootstrapInput.render) }};
-Seq[Any](format.raw/*1.24*/("""
+Seq[Any](format.raw/*1.36*/("""
 
 """),format.raw/*4.1*/("""
 """),format.raw/*5.80*/(""" 
 
-"""),_display_(Seq[Any](/*7.2*/main/*7.6*/ {_display_(Seq[Any](format.raw/*7.8*/("""
+"""),_display_(Seq[Any](/*7.2*/main(user)/*7.12*/ {_display_(Seq[Any](format.raw/*7.14*/("""
     
     <h1>Add a game</h1>
     
@@ -60,19 +60,19 @@ Seq[Any](format.raw/*1.24*/("""
 """)))})))}
     }
     
-    def render(gameForm:Form[Game]): play.api.templates.HtmlFormat.Appendable = apply(gameForm)
+    def render(gameForm:Form[Game],user:User): play.api.templates.HtmlFormat.Appendable = apply(gameForm,user)
     
-    def f:((Form[Game]) => play.api.templates.HtmlFormat.Appendable) = (gameForm) => apply(gameForm)
+    def f:((Form[Game],User) => play.api.templates.HtmlFormat.Appendable) = (gameForm,user) => apply(gameForm,user)
     
     def ref: this.type = this
 
 }
                 /*
                     -- GENERATED --
-                    DATE: Fri Jan 10 16:32:31 EST 2014
-                    SOURCE: D:/Projects/computer-database/app/views/createForm.scala.html
-                    HASH: e01350339dd2eb74cf2ebcb89c264aecb31f6cf7
-                    MATRIX: 783->1|908->48|940->72|1024->23|1054->45|1083->126|1123->132|1134->136|1172->138|1251->182|1288->210|1328->212|1447->295|1464->303|1508->325|1562->348|1611->362|1645->387|1685->389|1776->444|1851->497|2071->681|2086->687|2121->700|2210->758
+                    DATE: Fri Jan 10 19:23:09 EST 2014
+                    SOURCE: D:/Projects/gametracker-forms/app/views/createForm.scala.html
+                    HASH: a2dc2a0c648275b3f35665332ee82d9741348479
+                    MATRIX: 788->1|925->60|957->84|1041->35|1071->57|1100->138|1140->144|1158->154|1197->156|1276->200|1313->228|1353->230|1472->313|1489->321|1533->343|1587->366|1636->380|1670->405|1710->407|1801->462|1876->515|2096->699|2111->705|2146->718|2235->776
                     LINES: 26->1|29->5|29->5|30->1|32->4|33->5|35->7|35->7|35->7|39->11|39->11|39->11|41->13|41->13|41->13|43->15|45->17|45->17|45->17|49->21|49->21|55->27|55->27|55->27|58->30
                     -- GENERATED --
                 */

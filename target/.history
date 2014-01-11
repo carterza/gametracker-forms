@@ -4,3 +4,7 @@ run
 h2-brwoser
 h2-browser
 run
+clean
+compile
+clean
+run

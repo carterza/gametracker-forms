@@ -1,25 +1,21 @@
-@(id: Long, gameForm: Form[Game])
+@(id: Long, gameForm: Form[Game], user: User)
 
 @import helper._
 
 @implicitFieldConstructor = @{ FieldConstructor(twitterBootstrapInput.render) } 
 
-@main {
+@main(user) {
     
-    <h1>Edit game</h1>
+  <h1 class="text-info">Edit game</h1>
     
-    @form(routes.Games.update(id)) {
+  @form(routes.Games.update(id)) {
+  
+    @checkbox(gameForm("owned"), '_label -> "Owned")
+          
+    <div class="actions">
+      <button type="submit" class="btn btn-success">Save this game</button> or 
+      <a href="@routes.Games.list()" class="btn btn-default">Cancel</a> 
+    </div>
         
-        <fieldset>
-            
-            @checkbox(gameForm("owned"), '_label -> "Owned")
-        
-        </fieldset>
-        
-        <div class="actions">
-            <input type="submit" value="Save this game" class="btn primary"> or 
-            <a href="@routes.Games.list()" class="btn">Cancel</a> 
-        </div>
-        
-    }    
+  }  
 }

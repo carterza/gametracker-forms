@@ -36,7 +36,8 @@ public class Games extends Controller {
         return ok(
             list.render(
                 Game.list(false),
-                Game.list(true)
+                Game.list(true),
+                User.find.byId(request().username())
             )
         );
     }
@@ -51,7 +52,7 @@ public class Games extends Controller {
             Game.find.byId(id)
         );
         return ok(
-            editForm.render(id, gameForm)
+            editForm.render(id, gameForm, User.find.byId(request().username()))
         );
     }
     
@@ -75,7 +76,7 @@ public class Games extends Controller {
     public static Result create() {
         Form<Game> gameForm = form(Game.class);
         return ok(
-            createForm.render(gameForm)
+            createForm.render(gameForm, User.find.byId(request().username()))
         );
     }
     
@@ -85,7 +86,7 @@ public class Games extends Controller {
     public static Result save() {
         Form<Game> gameForm = form(Game.class).bindFromRequest();
         if(gameForm.hasErrors()) {
-            return badRequest(createForm.render(gameForm));
+            return badRequest(createForm.render(gameForm, User.find.byId(request().username())));
         }
         Game game = gameForm.get();
         game.votes.add(new Vote());

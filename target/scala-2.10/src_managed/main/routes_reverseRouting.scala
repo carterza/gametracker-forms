@@ -1,6 +1,6 @@
-// @SOURCE:D:/Projects/computer-database/conf/routes
-// @HASH:fed4c54813fe68131540b164186237a5a1f2b224
-// @DATE:Fri Jan 10 16:18:20 EST 2014
+// @SOURCE:D:/Projects/gametracker-forms/conf/routes
+// @HASH:bc67aa0baa217ea1e621aa17e04755be6100b384
+// @DATE:Fri Jan 10 20:02:11 EST 2014
 
 import Routes.{prefix => _prefix, defaultPrefix => _defaultPrefix}
 import play.core._
@@ -47,19 +47,19 @@ class ReverseApplication {
 
 // @LINE:11
 def logout(): Call = {
-   Call("GET", _prefix + { _defaultPrefix } + "logout")
+   Call("GET", _prefix + { _defaultPrefix } + "logout/")
 }
                                                 
 
 // @LINE:10
 def authenticate(): Call = {
-   Call("POST", _prefix + { _defaultPrefix } + "login")
+   Call("POST", _prefix + { _defaultPrefix } + "login/")
 }
                                                 
 
 // @LINE:9
 def login(): Call = {
-   Call("GET", _prefix + { _defaultPrefix } + "login")
+   Call("GET", _prefix + { _defaultPrefix } + "login/")
 }
                                                 
     
@@ -78,37 +78,37 @@ class ReverseGames {
 
 // @LINE:17
 def create(): Call = {
-   Call("GET", _prefix + { _defaultPrefix } + "games/new")
+   Call("GET", _prefix + { _defaultPrefix } + "games/new/")
 }
                                                 
 
 // @LINE:21
 def edit(id:Long): Call = {
-   Call("GET", _prefix + { _defaultPrefix } + "games/" + implicitly[PathBindable[Long]].unbind("id", id))
+   Call("GET", _prefix + { _defaultPrefix } + "games/" + implicitly[PathBindable[Long]].unbind("id", id) + "/")
 }
                                                 
 
 // @LINE:22
 def update(id:Long): Call = {
-   Call("POST", _prefix + { _defaultPrefix } + "games/" + implicitly[PathBindable[Long]].unbind("id", id))
+   Call("POST", _prefix + { _defaultPrefix } + "games/" + implicitly[PathBindable[Long]].unbind("id", id) + "/")
 }
                                                 
 
 // @LINE:25
 def vote(id:Long): Call = {
-   Call("POST", _prefix + { _defaultPrefix } + "games/" + implicitly[PathBindable[Long]].unbind("id", id) + "/vote")
+   Call("POST", _prefix + { _defaultPrefix } + "games/" + implicitly[PathBindable[Long]].unbind("id", id) + "/vote/")
 }
                                                 
 
 // @LINE:14
 def list(): Call = {
-   Call("GET", _prefix + { _defaultPrefix } + "games")
+   Call("GET", _prefix + { _defaultPrefix } + "games/")
 }
                                                 
 
 // @LINE:18
 def save(): Call = {
-   Call("POST", _prefix + { _defaultPrefix } + "games")
+   Call("POST", _prefix + { _defaultPrefix } + "games/")
 }
                                                 
 
@@ -166,7 +166,7 @@ def logout : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.Application.logout",
    """
       function() {
-      return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "logout"})
+      return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "logout/"})
       }
    """
 )
@@ -177,7 +177,7 @@ def authenticate : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.Application.authenticate",
    """
       function() {
-      return _wA({method:"POST", url:"""" + _prefix + { _defaultPrefix } + """" + "login"})
+      return _wA({method:"POST", url:"""" + _prefix + { _defaultPrefix } + """" + "login/"})
       }
    """
 )
@@ -188,7 +188,7 @@ def login : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.Application.login",
    """
       function() {
-      return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "login"})
+      return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "login/"})
       }
    """
 )
@@ -212,7 +212,7 @@ def create : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.Games.create",
    """
       function() {
-      return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "games/new"})
+      return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "games/new/"})
       }
    """
 )
@@ -223,7 +223,7 @@ def edit : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.Games.edit",
    """
       function(id) {
-      return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "games/" + (""" + implicitly[PathBindable[Long]].javascriptUnbind + """)("id", id)})
+      return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "games/" + (""" + implicitly[PathBindable[Long]].javascriptUnbind + """)("id", id) + "/"})
       }
    """
 )
@@ -234,7 +234,7 @@ def update : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.Games.update",
    """
       function(id) {
-      return _wA({method:"POST", url:"""" + _prefix + { _defaultPrefix } + """" + "games/" + (""" + implicitly[PathBindable[Long]].javascriptUnbind + """)("id", id)})
+      return _wA({method:"POST", url:"""" + _prefix + { _defaultPrefix } + """" + "games/" + (""" + implicitly[PathBindable[Long]].javascriptUnbind + """)("id", id) + "/"})
       }
    """
 )
@@ -245,7 +245,7 @@ def vote : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.Games.vote",
    """
       function(id) {
-      return _wA({method:"POST", url:"""" + _prefix + { _defaultPrefix } + """" + "games/" + (""" + implicitly[PathBindable[Long]].javascriptUnbind + """)("id", id) + "/vote"})
+      return _wA({method:"POST", url:"""" + _prefix + { _defaultPrefix } + """" + "games/" + (""" + implicitly[PathBindable[Long]].javascriptUnbind + """)("id", id) + "/vote/"})
       }
    """
 )
@@ -256,7 +256,7 @@ def list : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.Games.list",
    """
       function() {
-      return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "games"})
+      return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "games/"})
       }
    """
 )
@@ -267,7 +267,7 @@ def save : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.Games.save",
    """
       function() {
-      return _wA({method:"POST", url:"""" + _prefix + { _defaultPrefix } + """" + "games"})
+      return _wA({method:"POST", url:"""" + _prefix + { _defaultPrefix } + """" + "games/"})
       }
    """
 )
@@ -325,19 +325,19 @@ class ReverseApplication {
 
 // @LINE:11
 def logout(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
-   controllers.Application.logout(), HandlerDef(this, "controllers.Application", "logout", Seq(), "GET", """""", _prefix + """logout""")
+   controllers.Application.logout(), HandlerDef(this, "controllers.Application", "logout", Seq(), "GET", """""", _prefix + """logout/""")
 )
                       
 
 // @LINE:10
 def authenticate(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
-   controllers.Application.authenticate(), HandlerDef(this, "controllers.Application", "authenticate", Seq(), "POST", """""", _prefix + """login""")
+   controllers.Application.authenticate(), HandlerDef(this, "controllers.Application", "authenticate", Seq(), "POST", """""", _prefix + """login/""")
 )
                       
 
 // @LINE:9
 def login(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
-   controllers.Application.login(), HandlerDef(this, "controllers.Application", "login", Seq(), "GET", """ Authentication""", _prefix + """login""")
+   controllers.Application.login(), HandlerDef(this, "controllers.Application", "login", Seq(), "GET", """ Authentication""", _prefix + """login/""")
 )
                       
     
@@ -356,37 +356,37 @@ class ReverseGames {
 
 // @LINE:17
 def create(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
-   controllers.Games.create(), HandlerDef(this, "controllers.Games", "create", Seq(), "GET", """ Add game""", _prefix + """games/new""")
+   controllers.Games.create(), HandlerDef(this, "controllers.Games", "create", Seq(), "GET", """ Add game""", _prefix + """games/new/""")
 )
                       
 
 // @LINE:21
 def edit(id:Long): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
-   controllers.Games.edit(id), HandlerDef(this, "controllers.Games", "edit", Seq(classOf[Long]), "GET", """ Edit existing game""", _prefix + """games/$id<[^/]+>""")
+   controllers.Games.edit(id), HandlerDef(this, "controllers.Games", "edit", Seq(classOf[Long]), "GET", """ Edit existing game""", _prefix + """games/$id<[^/]+>/""")
 )
                       
 
 // @LINE:22
 def update(id:Long): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
-   controllers.Games.update(id), HandlerDef(this, "controllers.Games", "update", Seq(classOf[Long]), "POST", """""", _prefix + """games/$id<[^/]+>""")
+   controllers.Games.update(id), HandlerDef(this, "controllers.Games", "update", Seq(classOf[Long]), "POST", """""", _prefix + """games/$id<[^/]+>/""")
 )
                       
 
 // @LINE:25
 def vote(id:Long): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
-   controllers.Games.vote(id), HandlerDef(this, "controllers.Games", "vote", Seq(classOf[Long]), "POST", """ Vote for game""", _prefix + """games/$id<[^/]+>/vote""")
+   controllers.Games.vote(id), HandlerDef(this, "controllers.Games", "vote", Seq(classOf[Long]), "POST", """ Vote for game""", _prefix + """games/$id<[^/]+>/vote/""")
 )
                       
 
 // @LINE:14
 def list(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
-   controllers.Games.list(), HandlerDef(this, "controllers.Games", "list", Seq(), "GET", """ Game list""", _prefix + """games""")
+   controllers.Games.list(), HandlerDef(this, "controllers.Games", "list", Seq(), "GET", """ Game list""", _prefix + """games/""")
 )
                       
 
 // @LINE:18
 def save(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
-   controllers.Games.save(), HandlerDef(this, "controllers.Games", "save", Seq(), "POST", """""", _prefix + """games""")
+   controllers.Games.save(), HandlerDef(this, "controllers.Games", "save", Seq(), "POST", """""", _prefix + """games/""")
 )
                       
 

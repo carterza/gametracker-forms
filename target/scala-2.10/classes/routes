@@ -6,23 +6,23 @@
 GET     /                                   controllers.Games.index()
 
 # Authentication
-GET     /login                              controllers.Application.login()
-POST    /login                              controllers.Application.authenticate()
-GET     /logout                             controllers.Application.logout()
+GET     /login/                              controllers.Application.login()
+POST    /login/                              controllers.Application.authenticate()
+GET     /logout/                             controllers.Application.logout()
 
 # Game list
-GET     /games                              controllers.Games.list()
+GET     /games/                              controllers.Games.list()
 
 # Add game
-GET    /games/new                           controllers.Games.create()
-POST   /games                               controllers.Games.save()
+GET    /games/new/                           controllers.Games.create()
+POST   /games/                               controllers.Games.save()
 
 # Edit existing game
-GET     /games/:id                          controllers.Games.edit(id:Long)
-POST    /games/:id                          controllers.Games.update(id:Long)
+GET     /games/:id/                          controllers.Games.edit(id:Long)
+POST    /games/:id/                          controllers.Games.update(id:Long)
 
 # Vote for game
-POST    /games/:id/vote                     controllers.Games.vote(id:Long)
+POST    /games/:id/vote/                     controllers.Games.vote(id:Long)
 
 # Map static resources from the /public folder to the /assets URL path
 GET     /assets/*file                       controllers.Assets.at(path="/public", file)
