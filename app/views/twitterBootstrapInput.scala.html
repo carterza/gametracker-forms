@@ -1,12 +1,20 @@
 @(elements: helper.FieldElements)
+@inputType = @{ "type=[\"']([^ \"']+)[\"']".r.findFirstMatchIn(elements.input.body).map(m => m.group(1)).getOrElse("text") }
 
 @***************************************************
 * Generate input according twitter bootstrap rules *
 ***************************************************@
-<div class="clearfix @if(elements.hasErrors) {error}">
+@if(inputType == "checkbox") {
+  <div class="checkbox">
+    <label>
+      @elements.input @elements.label
+    </label>
+    <span class="help-block">@elements.infos.mkString(", ")</span>
+  </div>
+} else {
+  <div class="form-group @if(elements.hasErrors) {has-error}">
     <label for="@elements.id">@elements.label</label>
-    <div class="input">
-        @elements.input
-        <span class="help-inline">@elements.infos.mkString(", ")</span> 
-    </div>
-</div>
+    <input type="@inputType" class="form-control" id="@elements.id" name="@elements.field.name" value="@elements.field.value" />
+    <span class="help-block">@elements.infos.mkString(", ")</span>
+  </div>
+}

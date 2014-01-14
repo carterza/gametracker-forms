@@ -9,23 +9,16 @@
     <h1>Add a game</h1>
     
     @if(gameForm.hasGlobalErrors) { 
-        <div class="alert-message error">
-            <strong>Uh-oh!</strong> @gameForm.globalError.message()
+        <div class="alert alert-danger">
+            <strong>Error!</strong> @gameForm.globalError.message()
         </div>
     } 
     
     @form(routes.Games.save()) {
-        
-        <fieldset>
-        
-            @inputText(gameForm("title"), '_label -> "Game title")            
-
-        </fieldset>
-        
-        <div class="actions">
-            <input type="submit" value="Create this game" class="btn primary"> or 
-            <a href="@routes.Games.list()" class="btn">Cancel</a> 
-        </div>
+      @inputText(gameForm("title"), '_label -> "Game title")
+      <input type="hidden" id="@gameForm("createdBy.email").id" name="@gameForm("createdBy.email").name" value="@user.email" />
+      <button type="submit" class="btn btn-success">Create this game</button> or 
+      <a href="@routes.Games.list()" class="btn">Cancel</a> 
         
     }
     

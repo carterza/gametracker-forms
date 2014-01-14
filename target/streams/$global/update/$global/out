@@ -7,7 +7,7 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies for computer-database#computer-database_2.10;1.0 [compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies computer-database#computer-database_2.10;1.0->org.scala-lang#scala-library;2.10.2 [compile->default(compile)][0m
 [0m[[0minfo[0m] [0mResolving org.scala-lang#scala-library;2.10.2 ...[0m
-[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@17609f8f[0m
+[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@77ce179d[0m
 [0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: org.scala-lang#scala-library;2.10.2[0m
 [0m[[0mdebug[0m] [0m	local: revision in cache: org.scala-lang#scala-library;2.10.2[0m
 [0m[[0mdebug[0m] [0m	found org.scala-lang#scala-library;2.10.2 in sbt-chain[0m
@@ -188,14 +188,6 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-datacommons_2.10;2.2.1->org.scala-lang#scala-library;2.10.2 [compile->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-datacommons_2.10;2.2.1->org.scala-lang#scala-library;2.10.2 [compile->master][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-json_2.10;2.2.1->joda-time#joda-time;2.2 [compile->default(compile)][0m
-[0m[[0minfo[0m] [0mResolving joda-time#joda-time;2.2 ...[0m
-[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: joda-time#joda-time;2.2 {compile=[default(compile)]}[0m
-[0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: joda-time#joda-time;2.2[0m
-[0m[[0mdebug[0m] [0m	local: revision in cache: joda-time#joda-time;2.2[0m
-[0m[[0mdebug[0m] [0m	found joda-time#joda-time;2.2 in sbt-chain[0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-json_2.10;2.2.1->joda-time#joda-time;2.2 [compile->runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-json_2.10;2.2.1->joda-time#joda-time;2.2 [compile->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-json_2.10;2.2.1->joda-time#joda-time;2.2 [compile->master][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-json_2.10;2.2.1->org.joda#joda-convert;1.3.1 [compile->default(compile)][0m
 [0m[[0minfo[0m] [0mResolving org.joda#joda-convert;1.3.1 ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: org.joda#joda-convert;1.3.1 {compile=[default(compile)]}[0m
@@ -390,9 +382,6 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play_2.10;2.2.1->org.scala-stm#scala-stm_2.10;0.7 [compile->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play_2.10;2.2.1->org.scala-stm#scala-stm_2.10;0.7 [compile->master][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play_2.10;2.2.1->joda-time#joda-time;2.2 [compile->default(compile)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play_2.10;2.2.1->joda-time#joda-time;2.2 [compile->runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play_2.10;2.2.1->joda-time#joda-time;2.2 [compile->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play_2.10;2.2.1->joda-time#joda-time;2.2 [compile->master][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play_2.10;2.2.1->org.joda#joda-convert;1.3.1 [compile->default(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play_2.10;2.2.1->org.joda#joda-convert;1.3.1 [compile->runtime][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play_2.10;2.2.1->org.joda#joda-convert;1.3.1 [compile->compile][0m
@@ -597,6 +586,7 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java_2.10;2.2.1->org.hibernate#hibernate-validator;5.0.1.Final [compile->runtime][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java_2.10;2.2.1->org.hibernate#hibernate-validator;5.0.1.Final [compile->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.hibernate#hibernate-validator;5.0.1.Final->javax.validation#validation-api;1.1.0.Final [compile->master(*)][0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: joda-time#joda-time;2.3 {compile=[default(compile)]} => dependency: joda-time#joda-time;2.1 {compile=[default(compile)]}[0m
 [0m[[0minfo[0m] [0mResolving javax.validation#validation-api;1.1.0.Final ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: javax.validation#validation-api;1.1.0.Final {compile=[compile(*), master(*)], runtime=[runtime(*)]}[0m
 [0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: javax.validation#validation-api;1.1.0.Final[0m
@@ -604,6 +594,7 @@
 [0m[[0mdebug[0m] [0m	found javax.validation#validation-api;1.1.0.Final in sbt-chain[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.hibernate#hibernate-validator;5.0.1.Final->javax.validation#validation-api;1.1.0.Final [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.hibernate#hibernate-validator;5.0.1.Final->org.jboss.logging#jboss-logging;3.1.1.GA [compile->master(*)][0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: joda-time#joda-time;2.3 {compile=[default(compile)]} => dependency: joda-time#joda-time;2.1 {compile=[default(compile)]}[0m
 [0m[[0minfo[0m] [0mResolving org.jboss.logging#jboss-logging;3.1.1.GA ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: org.jboss.logging#jboss-logging;3.1.1.GA {compile=[compile(*), master(*)], runtime=[runtime(*)]}[0m
 [0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: org.jboss.logging#jboss-logging;3.1.1.GA[0m
@@ -613,6 +604,7 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies org.hibernate#hibernate-validator;5.0.1.Final->org.jboss.logging#jboss-logging;3.1.1.GA [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: log4j#log4j;1.2.16 {provided=[compile(*), provided(*), runtime(*), master(*)]} => dependency: log4j#log4j;1.2.17 {provided=[compile(*), provided(*), runtime(*), master(*)]}[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.hibernate#hibernate-validator;5.0.1.Final->com.fasterxml#classmate;0.8.0 [compile->master(*)][0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: joda-time#joda-time;2.3 {compile=[default(compile)]} => dependency: joda-time#joda-time;2.1 {compile=[default(compile)]}[0m
 [0m[[0minfo[0m] [0mResolving com.fasterxml#classmate;0.8.0 ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: com.fasterxml#classmate;0.8.0 {compile=[compile(*), master(*)], runtime=[runtime(*)]}[0m
 [0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: com.fasterxml#classmate;0.8.0[0m
@@ -732,6 +724,28 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-ebean_2.10;2.2.1->org.hibernate.javax.persistence#hibernate-jpa-2.0-api;1.0.1.Final [compile->runtime][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-ebean_2.10;2.2.1->org.hibernate.javax.persistence#hibernate-jpa-2.0-api;1.0.1.Final [compile->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-ebean_2.10;2.2.1->org.hibernate.javax.persistence#hibernate-jpa-2.0-api;1.0.1.Final [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies computer-database#computer-database_2.10;1.0->joda-time#joda-time;2.3 [compile->default(compile)][0m
+[0m[[0minfo[0m] [0mResolving joda-time#joda-time;2.3 ...[0m
+[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: joda-time#joda-time;2.3 {compile=[default(compile)]}[0m
+[0m[[0mdebug[0m] [0m		tried C:\play-2.2.1\repository\local\joda-time\joda-time\2.3\ivys\ivy.xml[0m
+[0m[[0mdebug[0m] [0m	local: no ivy file found for joda-time#joda-time;2.3[0m
+[0m[[0mdebug[0m] [0m		tried file:/C:/Users/zachcarter/.m2/repository/joda-time/joda-time/2.3/joda-time-2.3.pom[0m
+[0m[[0mdebug[0m] [0m	Maven2 Local: no ivy file found for joda-time#joda-time;2.3[0m
+[0m[[0mdebug[0m] [0m		tried http://repo1.maven.org/maven2/joda-time/joda-time/2.3/joda-time-2.3.pom[0m
+[0m[[0mdebug[0m] [0m	public: found md file for joda-time#joda-time;2.3[0m
+[0m[[0mdebug[0m] [0m		=> http://repo1.maven.org/maven2/joda-time/joda-time/2.3/joda-time-2.3.pom (2.3)[0m
+[0m[[0mdebug[0m] [0mdownloading http://repo1.maven.org/maven2/joda-time/joda-time/2.3/joda-time-2.3.pom ...[0m
+[0m[[0mdebug[0m] [0m	public: downloading http://repo1.maven.org/maven2/joda-time/joda-time/2.3/joda-time-2.3.pom[0m
+[0m[[0mdebug[0m] [0m	public: downloading http://repo1.maven.org/maven2/joda-time/joda-time/2.3/joda-time-2.3.pom.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for http://repo1.maven.org/maven2/joda-time/joda-time/2.3/joda-time-2.3.pom[0m
+[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] joda-time#joda-time;2.3!joda-time.pom(pom.original) (634ms)[0m
+[0m[[0mdebug[0m] [0m		tried C:\play-2.2.1\repository\local\joda-time\joda-time\2.3\jars\joda-time.jar[0m
+[0m[[0mdebug[0m] [0m		tried file:/C:/Users/zachcarter/.m2/repository/joda-time/joda-time/2.3/joda-time-2.3.jar[0m
+[0m[[0mdebug[0m] [0m		tried http://repo1.maven.org/maven2/joda-time/joda-time/2.3/joda-time-2.3.jar[0m
+[0m[[0mdebug[0m] [0m	found joda-time#joda-time;2.3 in public[0m
+[0m[[0mdebug[0m] [0m== resolving dependencies computer-database#computer-database_2.10;1.0->joda-time#joda-time;2.3 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies computer-database#computer-database_2.10;1.0->joda-time#joda-time;2.3 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies computer-database#computer-database_2.10;1.0->joda-time#joda-time;2.3 [compile->master][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies computer-database#computer-database_2.10;1.0->com.typesafe.play#play_2.10;2.2.1 [compile->default(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies computer-database#computer-database_2.10;1.0->com.typesafe.play#play-java_2.10;2.2.1 [compile->default(compile)][0m
 [0m[[0mdebug[0m] [0mresolving dependencies for configuration 'runtime'[0m
@@ -830,9 +844,10 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-datacommons_2.10;2.2.1->org.scala-lang#scala-library;2.10.2 [compile->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-datacommons_2.10;2.2.1->org.scala-lang#scala-library;2.10.2 [compile->master][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-json_2.10;2.2.1->joda-time#joda-time;2.2 [compile->default(compile)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-json_2.10;2.2.1->joda-time#joda-time;2.2 [compile->runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-json_2.10;2.2.1->joda-time#joda-time;2.2 [compile->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-json_2.10;2.2.1->joda-time#joda-time;2.2 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-json_2.10;2.2.1->joda-time#joda-time;2.3 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-json_2.10;2.2.1->joda-time#joda-time;2.3 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-json_2.10;2.2.1->joda-time#joda-time;2.3 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-json_2.10;2.2.1->joda-time#joda-time;2.3 [compile->master][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-json_2.10;2.2.1->org.joda#joda-convert;1.3.1 [compile->default(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-json_2.10;2.2.1->org.joda#joda-convert;1.3.1 [compile->runtime][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-json_2.10;2.2.1->org.joda#joda-convert;1.3.1 [compile->compile][0m
@@ -956,9 +971,10 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play_2.10;2.2.1->org.scala-stm#scala-stm_2.10;0.7 [compile->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play_2.10;2.2.1->org.scala-stm#scala-stm_2.10;0.7 [compile->master][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play_2.10;2.2.1->joda-time#joda-time;2.2 [compile->default(compile)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play_2.10;2.2.1->joda-time#joda-time;2.2 [compile->runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play_2.10;2.2.1->joda-time#joda-time;2.2 [compile->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play_2.10;2.2.1->joda-time#joda-time;2.2 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play_2.10;2.2.1->joda-time#joda-time;2.3 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play_2.10;2.2.1->joda-time#joda-time;2.3 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play_2.10;2.2.1->joda-time#joda-time;2.3 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play_2.10;2.2.1->joda-time#joda-time;2.3 [compile->master][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play_2.10;2.2.1->org.joda#joda-convert;1.3.1 [compile->default(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play_2.10;2.2.1->org.joda#joda-convert;1.3.1 [compile->runtime][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play_2.10;2.2.1->org.joda#joda-convert;1.3.1 [compile->compile][0m
@@ -1071,12 +1087,18 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java_2.10;2.2.1->org.hibernate#hibernate-validator;5.0.1.Final [compile->runtime][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java_2.10;2.2.1->org.hibernate#hibernate-validator;5.0.1.Final [compile->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.hibernate#hibernate-validator;5.0.1.Final->javax.validation#validation-api;1.1.0.Final [compile->master(*)][0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: joda-time#joda-time;2.3 {compile=[default(compile)]} => dependency: joda-time#joda-time;2.1 {compile=[default(compile)]}[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: joda-time#joda-time;2.3 {compile=[default(compile)]} => dependency: joda-time#joda-time;2.1 {compile=[default(compile)]}[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.hibernate#hibernate-validator;5.0.1.Final->javax.validation#validation-api;1.1.0.Final [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.hibernate#hibernate-validator;5.0.1.Final->org.jboss.logging#jboss-logging;3.1.1.GA [compile->master(*)][0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: joda-time#joda-time;2.3 {compile=[default(compile)]} => dependency: joda-time#joda-time;2.1 {compile=[default(compile)]}[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: joda-time#joda-time;2.3 {compile=[default(compile)]} => dependency: joda-time#joda-time;2.1 {compile=[default(compile)]}[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: log4j#log4j;1.2.16 {provided=[compile(*), provided(*), runtime(*), master(*)]} => dependency: log4j#log4j;1.2.17 {provided=[compile(*), provided(*), runtime(*), master(*)]}[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.hibernate#hibernate-validator;5.0.1.Final->org.jboss.logging#jboss-logging;3.1.1.GA [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: log4j#log4j;1.2.16 {provided=[compile(*), provided(*), runtime(*), master(*)]} => dependency: log4j#log4j;1.2.17 {provided=[compile(*), provided(*), runtime(*), master(*)]}[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.hibernate#hibernate-validator;5.0.1.Final->com.fasterxml#classmate;0.8.0 [compile->master(*)][0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: joda-time#joda-time;2.3 {compile=[default(compile)]} => dependency: joda-time#joda-time;2.1 {compile=[default(compile)]}[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: joda-time#joda-time;2.3 {compile=[default(compile)]} => dependency: joda-time#joda-time;2.1 {compile=[default(compile)]}[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: junit#junit;4.8.1 {test=[runtime(*), master(*)]} => dependency: junit#junit;4.11 {test=[runtime(*), master(*)]}[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.hibernate#hibernate-validator;5.0.1.Final->com.fasterxml#classmate;0.8.0 [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: junit#junit;4.8.1 {test=[runtime(*), master(*)]} => dependency: junit#junit;4.11 {test=[runtime(*), master(*)]}[0m
@@ -1141,6 +1163,10 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-ebean_2.10;2.2.1->org.hibernate.javax.persistence#hibernate-jpa-2.0-api;1.0.1.Final [compile->runtime][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-ebean_2.10;2.2.1->org.hibernate.javax.persistence#hibernate-jpa-2.0-api;1.0.1.Final [compile->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-ebean_2.10;2.2.1->org.hibernate.javax.persistence#hibernate-jpa-2.0-api;1.0.1.Final [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies computer-database#computer-database_2.10;1.0->joda-time#joda-time;2.3 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies computer-database#computer-database_2.10;1.0->joda-time#joda-time;2.3 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies computer-database#computer-database_2.10;1.0->joda-time#joda-time;2.3 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies computer-database#computer-database_2.10;1.0->joda-time#joda-time;2.3 [compile->master][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies computer-database#computer-database_2.10;1.0->com.typesafe.play#play_2.10;2.2.1 [compile->default(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies computer-database#computer-database_2.10;1.0->com.typesafe.play#play-java_2.10;2.2.1 [compile->default(compile)][0m
 [0m[[0mdebug[0m] [0mresolving dependencies for configuration 'test'[0m
@@ -1240,9 +1266,10 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-datacommons_2.10;2.2.1->org.scala-lang#scala-library;2.10.2 [compile->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-datacommons_2.10;2.2.1->org.scala-lang#scala-library;2.10.2 [compile->master][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-json_2.10;2.2.1->joda-time#joda-time;2.2 [compile->default(compile)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-json_2.10;2.2.1->joda-time#joda-time;2.2 [compile->runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-json_2.10;2.2.1->joda-time#joda-time;2.2 [compile->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-json_2.10;2.2.1->joda-time#joda-time;2.2 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-json_2.10;2.2.1->joda-time#joda-time;2.3 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-json_2.10;2.2.1->joda-time#joda-time;2.3 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-json_2.10;2.2.1->joda-time#joda-time;2.3 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-json_2.10;2.2.1->joda-time#joda-time;2.3 [compile->master][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-json_2.10;2.2.1->org.joda#joda-convert;1.3.1 [compile->default(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-json_2.10;2.2.1->org.joda#joda-convert;1.3.1 [compile->runtime][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-json_2.10;2.2.1->org.joda#joda-convert;1.3.1 [compile->compile][0m
@@ -1366,9 +1393,10 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play_2.10;2.2.1->org.scala-stm#scala-stm_2.10;0.7 [compile->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play_2.10;2.2.1->org.scala-stm#scala-stm_2.10;0.7 [compile->master][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play_2.10;2.2.1->joda-time#joda-time;2.2 [compile->default(compile)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play_2.10;2.2.1->joda-time#joda-time;2.2 [compile->runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play_2.10;2.2.1->joda-time#joda-time;2.2 [compile->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play_2.10;2.2.1->joda-time#joda-time;2.2 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play_2.10;2.2.1->joda-time#joda-time;2.3 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play_2.10;2.2.1->joda-time#joda-time;2.3 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play_2.10;2.2.1->joda-time#joda-time;2.3 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play_2.10;2.2.1->joda-time#joda-time;2.3 [compile->master][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play_2.10;2.2.1->org.joda#joda-convert;1.3.1 [compile->default(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play_2.10;2.2.1->org.joda#joda-convert;1.3.1 [compile->runtime][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play_2.10;2.2.1->org.joda#joda-convert;1.3.1 [compile->compile][0m
@@ -1481,12 +1509,21 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java_2.10;2.2.1->org.hibernate#hibernate-validator;5.0.1.Final [compile->runtime][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java_2.10;2.2.1->org.hibernate#hibernate-validator;5.0.1.Final [compile->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.hibernate#hibernate-validator;5.0.1.Final->javax.validation#validation-api;1.1.0.Final [compile->master(*)][0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: joda-time#joda-time;2.3 {compile=[default(compile)]} => dependency: joda-time#joda-time;2.1 {compile=[default(compile)]}[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: joda-time#joda-time;2.3 {compile=[default(compile)]} => dependency: joda-time#joda-time;2.1 {compile=[default(compile)]}[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: joda-time#joda-time;2.3 {compile=[default(compile)]} => dependency: joda-time#joda-time;2.1 {compile=[default(compile)]}[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.hibernate#hibernate-validator;5.0.1.Final->javax.validation#validation-api;1.1.0.Final [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.hibernate#hibernate-validator;5.0.1.Final->org.jboss.logging#jboss-logging;3.1.1.GA [compile->master(*)][0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: joda-time#joda-time;2.3 {compile=[default(compile)]} => dependency: joda-time#joda-time;2.1 {compile=[default(compile)]}[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: joda-time#joda-time;2.3 {compile=[default(compile)]} => dependency: joda-time#joda-time;2.1 {compile=[default(compile)]}[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: joda-time#joda-time;2.3 {compile=[default(compile)]} => dependency: joda-time#joda-time;2.1 {compile=[default(compile)]}[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: log4j#log4j;1.2.16 {provided=[compile(*), provided(*), runtime(*), master(*)]} => dependency: log4j#log4j;1.2.17 {provided=[compile(*), provided(*), runtime(*), master(*)]}[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.hibernate#hibernate-validator;5.0.1.Final->org.jboss.logging#jboss-logging;3.1.1.GA [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: log4j#log4j;1.2.16 {provided=[compile(*), provided(*), runtime(*), master(*)]} => dependency: log4j#log4j;1.2.17 {provided=[compile(*), provided(*), runtime(*), master(*)]}[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.hibernate#hibernate-validator;5.0.1.Final->com.fasterxml#classmate;0.8.0 [compile->master(*)][0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: joda-time#joda-time;2.3 {compile=[default(compile)]} => dependency: joda-time#joda-time;2.1 {compile=[default(compile)]}[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: joda-time#joda-time;2.3 {compile=[default(compile)]} => dependency: joda-time#joda-time;2.1 {compile=[default(compile)]}[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: joda-time#joda-time;2.3 {compile=[default(compile)]} => dependency: joda-time#joda-time;2.1 {compile=[default(compile)]}[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: junit#junit;4.8.1 {test=[runtime(*), master(*)]} => dependency: junit#junit;4.11 {test=[runtime(*), master(*)]}[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.hibernate#hibernate-validator;5.0.1.Final->com.fasterxml#classmate;0.8.0 [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: junit#junit;4.8.1 {test=[runtime(*), master(*)]} => dependency: junit#junit;4.11 {test=[runtime(*), master(*)]}[0m
@@ -1551,6 +1588,10 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-ebean_2.10;2.2.1->org.hibernate.javax.persistence#hibernate-jpa-2.0-api;1.0.1.Final [compile->runtime][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-ebean_2.10;2.2.1->org.hibernate.javax.persistence#hibernate-jpa-2.0-api;1.0.1.Final [compile->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-ebean_2.10;2.2.1->org.hibernate.javax.persistence#hibernate-jpa-2.0-api;1.0.1.Final [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies computer-database#computer-database_2.10;1.0->joda-time#joda-time;2.3 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies computer-database#computer-database_2.10;1.0->joda-time#joda-time;2.3 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies computer-database#computer-database_2.10;1.0->joda-time#joda-time;2.3 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies computer-database#computer-database_2.10;1.0->joda-time#joda-time;2.3 [compile->master][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies computer-database#computer-database_2.10;1.0->com.typesafe.play#play_2.10;2.2.1 [compile->default(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies computer-database#computer-database_2.10;1.0->com.typesafe.play#play-java_2.10;2.2.1 [compile->default(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies computer-database#computer-database_2.10;1.0->com.typesafe.play#play-test_2.10;2.2.1 [test->default(compile)][0m
@@ -2573,9 +2614,10 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-datacommons_2.10;2.2.1->org.scala-lang#scala-library;2.10.2 [compile->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-datacommons_2.10;2.2.1->org.scala-lang#scala-library;2.10.2 [compile->master][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-json_2.10;2.2.1->joda-time#joda-time;2.2 [compile->default(compile)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-json_2.10;2.2.1->joda-time#joda-time;2.2 [compile->runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-json_2.10;2.2.1->joda-time#joda-time;2.2 [compile->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-json_2.10;2.2.1->joda-time#joda-time;2.2 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-json_2.10;2.2.1->joda-time#joda-time;2.3 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-json_2.10;2.2.1->joda-time#joda-time;2.3 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-json_2.10;2.2.1->joda-time#joda-time;2.3 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-json_2.10;2.2.1->joda-time#joda-time;2.3 [compile->master][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-json_2.10;2.2.1->org.joda#joda-convert;1.3.1 [compile->default(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-json_2.10;2.2.1->org.joda#joda-convert;1.3.1 [compile->runtime][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-json_2.10;2.2.1->org.joda#joda-convert;1.3.1 [compile->compile][0m
@@ -2699,9 +2741,10 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play_2.10;2.2.1->org.scala-stm#scala-stm_2.10;0.7 [compile->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play_2.10;2.2.1->org.scala-stm#scala-stm_2.10;0.7 [compile->master][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play_2.10;2.2.1->joda-time#joda-time;2.2 [compile->default(compile)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play_2.10;2.2.1->joda-time#joda-time;2.2 [compile->runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play_2.10;2.2.1->joda-time#joda-time;2.2 [compile->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play_2.10;2.2.1->joda-time#joda-time;2.2 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play_2.10;2.2.1->joda-time#joda-time;2.3 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play_2.10;2.2.1->joda-time#joda-time;2.3 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play_2.10;2.2.1->joda-time#joda-time;2.3 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play_2.10;2.2.1->joda-time#joda-time;2.3 [compile->master][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play_2.10;2.2.1->org.joda#joda-convert;1.3.1 [compile->default(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play_2.10;2.2.1->org.joda#joda-convert;1.3.1 [compile->runtime][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play_2.10;2.2.1->org.joda#joda-convert;1.3.1 [compile->compile][0m
@@ -2814,12 +2857,24 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java_2.10;2.2.1->org.hibernate#hibernate-validator;5.0.1.Final [compile->runtime][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java_2.10;2.2.1->org.hibernate#hibernate-validator;5.0.1.Final [compile->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.hibernate#hibernate-validator;5.0.1.Final->javax.validation#validation-api;1.1.0.Final [compile->master(*)][0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: joda-time#joda-time;2.3 {compile=[default(compile)]} => dependency: joda-time#joda-time;2.1 {compile=[default(compile)]}[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: joda-time#joda-time;2.3 {compile=[default(compile)]} => dependency: joda-time#joda-time;2.1 {compile=[default(compile)]}[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: joda-time#joda-time;2.3 {compile=[default(compile)]} => dependency: joda-time#joda-time;2.1 {compile=[default(compile)]}[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: joda-time#joda-time;2.3 {compile=[default(compile)]} => dependency: joda-time#joda-time;2.1 {compile=[default(compile)]}[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.hibernate#hibernate-validator;5.0.1.Final->javax.validation#validation-api;1.1.0.Final [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.hibernate#hibernate-validator;5.0.1.Final->org.jboss.logging#jboss-logging;3.1.1.GA [compile->master(*)][0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: joda-time#joda-time;2.3 {compile=[default(compile)]} => dependency: joda-time#joda-time;2.1 {compile=[default(compile)]}[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: joda-time#joda-time;2.3 {compile=[default(compile)]} => dependency: joda-time#joda-time;2.1 {compile=[default(compile)]}[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: joda-time#joda-time;2.3 {compile=[default(compile)]} => dependency: joda-time#joda-time;2.1 {compile=[default(compile)]}[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: joda-time#joda-time;2.3 {compile=[default(compile)]} => dependency: joda-time#joda-time;2.1 {compile=[default(compile)]}[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: log4j#log4j;1.2.16 {provided=[compile(*), provided(*), runtime(*), master(*)]} => dependency: log4j#log4j;1.2.17 {provided=[compile(*), provided(*), runtime(*), master(*)]}[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.hibernate#hibernate-validator;5.0.1.Final->org.jboss.logging#jboss-logging;3.1.1.GA [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: log4j#log4j;1.2.16 {provided=[compile(*), provided(*), runtime(*), master(*)]} => dependency: log4j#log4j;1.2.17 {provided=[compile(*), provided(*), runtime(*), master(*)]}[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.hibernate#hibernate-validator;5.0.1.Final->com.fasterxml#classmate;0.8.0 [compile->master(*)][0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: joda-time#joda-time;2.3 {compile=[default(compile)]} => dependency: joda-time#joda-time;2.1 {compile=[default(compile)]}[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: joda-time#joda-time;2.3 {compile=[default(compile)]} => dependency: joda-time#joda-time;2.1 {compile=[default(compile)]}[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: joda-time#joda-time;2.3 {compile=[default(compile)]} => dependency: joda-time#joda-time;2.1 {compile=[default(compile)]}[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: joda-time#joda-time;2.3 {compile=[default(compile)]} => dependency: joda-time#joda-time;2.1 {compile=[default(compile)]}[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: junit#junit;4.8.1 {test=[runtime(*), master(*)]} => dependency: junit#junit;4.11 {test=[runtime(*), master(*)]}[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.hibernate#hibernate-validator;5.0.1.Final->com.fasterxml#classmate;0.8.0 [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: junit#junit;4.8.1 {test=[runtime(*), master(*)]} => dependency: junit#junit;4.11 {test=[runtime(*), master(*)]}[0m
@@ -2884,6 +2939,10 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-ebean_2.10;2.2.1->org.hibernate.javax.persistence#hibernate-jpa-2.0-api;1.0.1.Final [compile->runtime][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-ebean_2.10;2.2.1->org.hibernate.javax.persistence#hibernate-jpa-2.0-api;1.0.1.Final [compile->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-ebean_2.10;2.2.1->org.hibernate.javax.persistence#hibernate-jpa-2.0-api;1.0.1.Final [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies computer-database#computer-database_2.10;1.0->joda-time#joda-time;2.3 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies computer-database#computer-database_2.10;1.0->joda-time#joda-time;2.3 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies computer-database#computer-database_2.10;1.0->joda-time#joda-time;2.3 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies computer-database#computer-database_2.10;1.0->joda-time#joda-time;2.3 [compile->master][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies computer-database#computer-database_2.10;1.0->com.typesafe.play#play_2.10;2.2.1 [compile->default(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies computer-database#computer-database_2.10;1.0->com.typesafe.play#play-java_2.10;2.2.1 [compile->default(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies for computer-database#computer-database_2.10;1.0 [optional][0m
@@ -2985,9 +3044,10 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-datacommons_2.10;2.2.1->org.scala-lang#scala-library;2.10.2 [compile->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-datacommons_2.10;2.2.1->org.scala-lang#scala-library;2.10.2 [compile->master][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-json_2.10;2.2.1->joda-time#joda-time;2.2 [compile->default(compile)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-json_2.10;2.2.1->joda-time#joda-time;2.2 [compile->runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-json_2.10;2.2.1->joda-time#joda-time;2.2 [compile->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-json_2.10;2.2.1->joda-time#joda-time;2.2 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-json_2.10;2.2.1->joda-time#joda-time;2.3 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-json_2.10;2.2.1->joda-time#joda-time;2.3 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-json_2.10;2.2.1->joda-time#joda-time;2.3 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-json_2.10;2.2.1->joda-time#joda-time;2.3 [compile->master][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-json_2.10;2.2.1->org.joda#joda-convert;1.3.1 [compile->default(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-json_2.10;2.2.1->org.joda#joda-convert;1.3.1 [compile->runtime][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-json_2.10;2.2.1->org.joda#joda-convert;1.3.1 [compile->compile][0m
@@ -3111,9 +3171,10 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play_2.10;2.2.1->org.scala-stm#scala-stm_2.10;0.7 [compile->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play_2.10;2.2.1->org.scala-stm#scala-stm_2.10;0.7 [compile->master][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play_2.10;2.2.1->joda-time#joda-time;2.2 [compile->default(compile)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play_2.10;2.2.1->joda-time#joda-time;2.2 [compile->runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play_2.10;2.2.1->joda-time#joda-time;2.2 [compile->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play_2.10;2.2.1->joda-time#joda-time;2.2 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play_2.10;2.2.1->joda-time#joda-time;2.3 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play_2.10;2.2.1->joda-time#joda-time;2.3 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play_2.10;2.2.1->joda-time#joda-time;2.3 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play_2.10;2.2.1->joda-time#joda-time;2.3 [compile->master][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play_2.10;2.2.1->org.joda#joda-convert;1.3.1 [compile->default(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play_2.10;2.2.1->org.joda#joda-convert;1.3.1 [compile->runtime][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play_2.10;2.2.1->org.joda#joda-convert;1.3.1 [compile->compile][0m
@@ -3226,12 +3287,24 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java_2.10;2.2.1->org.hibernate#hibernate-validator;5.0.1.Final [compile->runtime][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java_2.10;2.2.1->org.hibernate#hibernate-validator;5.0.1.Final [compile->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.hibernate#hibernate-validator;5.0.1.Final->javax.validation#validation-api;1.1.0.Final [compile->master(*)][0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: joda-time#joda-time;2.3 {compile=[default(compile)]} => dependency: joda-time#joda-time;2.1 {compile=[default(compile)]}[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: joda-time#joda-time;2.3 {compile=[default(compile)]} => dependency: joda-time#joda-time;2.1 {compile=[default(compile)]}[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: joda-time#joda-time;2.3 {compile=[default(compile)]} => dependency: joda-time#joda-time;2.1 {compile=[default(compile)]}[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: joda-time#joda-time;2.3 {compile=[default(compile)]} => dependency: joda-time#joda-time;2.1 {compile=[default(compile)]}[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.hibernate#hibernate-validator;5.0.1.Final->javax.validation#validation-api;1.1.0.Final [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.hibernate#hibernate-validator;5.0.1.Final->org.jboss.logging#jboss-logging;3.1.1.GA [compile->master(*)][0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: joda-time#joda-time;2.3 {compile=[default(compile)]} => dependency: joda-time#joda-time;2.1 {compile=[default(compile)]}[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: joda-time#joda-time;2.3 {compile=[default(compile)]} => dependency: joda-time#joda-time;2.1 {compile=[default(compile)]}[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: joda-time#joda-time;2.3 {compile=[default(compile)]} => dependency: joda-time#joda-time;2.1 {compile=[default(compile)]}[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: joda-time#joda-time;2.3 {compile=[default(compile)]} => dependency: joda-time#joda-time;2.1 {compile=[default(compile)]}[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: log4j#log4j;1.2.16 {provided=[compile(*), provided(*), runtime(*), master(*)]} => dependency: log4j#log4j;1.2.17 {provided=[compile(*), provided(*), runtime(*), master(*)]}[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.hibernate#hibernate-validator;5.0.1.Final->org.jboss.logging#jboss-logging;3.1.1.GA [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: log4j#log4j;1.2.16 {provided=[compile(*), provided(*), runtime(*), master(*)]} => dependency: log4j#log4j;1.2.17 {provided=[compile(*), provided(*), runtime(*), master(*)]}[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.hibernate#hibernate-validator;5.0.1.Final->com.fasterxml#classmate;0.8.0 [compile->master(*)][0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: joda-time#joda-time;2.3 {compile=[default(compile)]} => dependency: joda-time#joda-time;2.1 {compile=[default(compile)]}[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: joda-time#joda-time;2.3 {compile=[default(compile)]} => dependency: joda-time#joda-time;2.1 {compile=[default(compile)]}[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: joda-time#joda-time;2.3 {compile=[default(compile)]} => dependency: joda-time#joda-time;2.1 {compile=[default(compile)]}[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: joda-time#joda-time;2.3 {compile=[default(compile)]} => dependency: joda-time#joda-time;2.1 {compile=[default(compile)]}[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: junit#junit;4.8.1 {test=[runtime(*), master(*)]} => dependency: junit#junit;4.11 {test=[runtime(*), master(*)]}[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.hibernate#hibernate-validator;5.0.1.Final->com.fasterxml#classmate;0.8.0 [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: junit#junit;4.8.1 {test=[runtime(*), master(*)]} => dependency: junit#junit;4.11 {test=[runtime(*), master(*)]}[0m
@@ -3296,6 +3369,10 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-ebean_2.10;2.2.1->org.hibernate.javax.persistence#hibernate-jpa-2.0-api;1.0.1.Final [compile->runtime][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-ebean_2.10;2.2.1->org.hibernate.javax.persistence#hibernate-jpa-2.0-api;1.0.1.Final [compile->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-ebean_2.10;2.2.1->org.hibernate.javax.persistence#hibernate-jpa-2.0-api;1.0.1.Final [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies computer-database#computer-database_2.10;1.0->joda-time#joda-time;2.3 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies computer-database#computer-database_2.10;1.0->joda-time#joda-time;2.3 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies computer-database#computer-database_2.10;1.0->joda-time#joda-time;2.3 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies computer-database#computer-database_2.10;1.0->joda-time#joda-time;2.3 [compile->master][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies computer-database#computer-database_2.10;1.0->com.typesafe.play#play_2.10;2.2.1 [compile->default(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies computer-database#computer-database_2.10;1.0->com.typesafe.play#play-java_2.10;2.2.1 [compile->default(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies for computer-database#computer-database_2.10;1.0 [optional][0m
@@ -3397,9 +3474,10 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-datacommons_2.10;2.2.1->org.scala-lang#scala-library;2.10.2 [compile->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-datacommons_2.10;2.2.1->org.scala-lang#scala-library;2.10.2 [compile->master][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-json_2.10;2.2.1->joda-time#joda-time;2.2 [compile->default(compile)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-json_2.10;2.2.1->joda-time#joda-time;2.2 [compile->runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-json_2.10;2.2.1->joda-time#joda-time;2.2 [compile->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-json_2.10;2.2.1->joda-time#joda-time;2.2 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-json_2.10;2.2.1->joda-time#joda-time;2.3 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-json_2.10;2.2.1->joda-time#joda-time;2.3 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-json_2.10;2.2.1->joda-time#joda-time;2.3 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-json_2.10;2.2.1->joda-time#joda-time;2.3 [compile->master][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-json_2.10;2.2.1->org.joda#joda-convert;1.3.1 [compile->default(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-json_2.10;2.2.1->org.joda#joda-convert;1.3.1 [compile->runtime][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-json_2.10;2.2.1->org.joda#joda-convert;1.3.1 [compile->compile][0m
@@ -3523,9 +3601,10 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play_2.10;2.2.1->org.scala-stm#scala-stm_2.10;0.7 [compile->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play_2.10;2.2.1->org.scala-stm#scala-stm_2.10;0.7 [compile->master][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play_2.10;2.2.1->joda-time#joda-time;2.2 [compile->default(compile)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play_2.10;2.2.1->joda-time#joda-time;2.2 [compile->runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play_2.10;2.2.1->joda-time#joda-time;2.2 [compile->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play_2.10;2.2.1->joda-time#joda-time;2.2 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play_2.10;2.2.1->joda-time#joda-time;2.3 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play_2.10;2.2.1->joda-time#joda-time;2.3 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play_2.10;2.2.1->joda-time#joda-time;2.3 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play_2.10;2.2.1->joda-time#joda-time;2.3 [compile->master][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play_2.10;2.2.1->org.joda#joda-convert;1.3.1 [compile->default(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play_2.10;2.2.1->org.joda#joda-convert;1.3.1 [compile->runtime][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play_2.10;2.2.1->org.joda#joda-convert;1.3.1 [compile->compile][0m
@@ -3638,12 +3717,30 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java_2.10;2.2.1->org.hibernate#hibernate-validator;5.0.1.Final [compile->runtime][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java_2.10;2.2.1->org.hibernate#hibernate-validator;5.0.1.Final [compile->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.hibernate#hibernate-validator;5.0.1.Final->javax.validation#validation-api;1.1.0.Final [compile->master(*)][0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: joda-time#joda-time;2.3 {compile=[default(compile)]} => dependency: joda-time#joda-time;2.1 {compile=[default(compile)]}[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: joda-time#joda-time;2.3 {compile=[default(compile)]} => dependency: joda-time#joda-time;2.1 {compile=[default(compile)]}[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: joda-time#joda-time;2.3 {compile=[default(compile)]} => dependency: joda-time#joda-time;2.1 {compile=[default(compile)]}[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: joda-time#joda-time;2.3 {compile=[default(compile)]} => dependency: joda-time#joda-time;2.1 {compile=[default(compile)]}[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: joda-time#joda-time;2.3 {compile=[default(compile)]} => dependency: joda-time#joda-time;2.1 {compile=[default(compile)]}[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: joda-time#joda-time;2.3 {compile=[default(compile)]} => dependency: joda-time#joda-time;2.1 {compile=[default(compile)]}[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.hibernate#hibernate-validator;5.0.1.Final->javax.validation#validation-api;1.1.0.Final [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.hibernate#hibernate-validator;5.0.1.Final->org.jboss.logging#jboss-logging;3.1.1.GA [compile->master(*)][0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: joda-time#joda-time;2.3 {compile=[default(compile)]} => dependency: joda-time#joda-time;2.1 {compile=[default(compile)]}[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: joda-time#joda-time;2.3 {compile=[default(compile)]} => dependency: joda-time#joda-time;2.1 {compile=[default(compile)]}[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: joda-time#joda-time;2.3 {compile=[default(compile)]} => dependency: joda-time#joda-time;2.1 {compile=[default(compile)]}[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: joda-time#joda-time;2.3 {compile=[default(compile)]} => dependency: joda-time#joda-time;2.1 {compile=[default(compile)]}[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: joda-time#joda-time;2.3 {compile=[default(compile)]} => dependency: joda-time#joda-time;2.1 {compile=[default(compile)]}[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: joda-time#joda-time;2.3 {compile=[default(compile)]} => dependency: joda-time#joda-time;2.1 {compile=[default(compile)]}[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: log4j#log4j;1.2.16 {provided=[compile(*), provided(*), runtime(*), master(*)]} => dependency: log4j#log4j;1.2.17 {provided=[compile(*), provided(*), runtime(*), master(*)]}[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.hibernate#hibernate-validator;5.0.1.Final->org.jboss.logging#jboss-logging;3.1.1.GA [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: log4j#log4j;1.2.16 {provided=[compile(*), provided(*), runtime(*), master(*)]} => dependency: log4j#log4j;1.2.17 {provided=[compile(*), provided(*), runtime(*), master(*)]}[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.hibernate#hibernate-validator;5.0.1.Final->com.fasterxml#classmate;0.8.0 [compile->master(*)][0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: joda-time#joda-time;2.3 {compile=[default(compile)]} => dependency: joda-time#joda-time;2.1 {compile=[default(compile)]}[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: joda-time#joda-time;2.3 {compile=[default(compile)]} => dependency: joda-time#joda-time;2.1 {compile=[default(compile)]}[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: joda-time#joda-time;2.3 {compile=[default(compile)]} => dependency: joda-time#joda-time;2.1 {compile=[default(compile)]}[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: joda-time#joda-time;2.3 {compile=[default(compile)]} => dependency: joda-time#joda-time;2.1 {compile=[default(compile)]}[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: joda-time#joda-time;2.3 {compile=[default(compile)]} => dependency: joda-time#joda-time;2.1 {compile=[default(compile)]}[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: joda-time#joda-time;2.3 {compile=[default(compile)]} => dependency: joda-time#joda-time;2.1 {compile=[default(compile)]}[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: junit#junit;4.8.1 {test=[runtime(*), master(*)]} => dependency: junit#junit;4.11 {test=[runtime(*), master(*)]}[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.hibernate#hibernate-validator;5.0.1.Final->com.fasterxml#classmate;0.8.0 [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: junit#junit;4.8.1 {test=[runtime(*), master(*)]} => dependency: junit#junit;4.11 {test=[runtime(*), master(*)]}[0m
@@ -3708,6 +3805,10 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-ebean_2.10;2.2.1->org.hibernate.javax.persistence#hibernate-jpa-2.0-api;1.0.1.Final [compile->runtime][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-ebean_2.10;2.2.1->org.hibernate.javax.persistence#hibernate-jpa-2.0-api;1.0.1.Final [compile->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-ebean_2.10;2.2.1->org.hibernate.javax.persistence#hibernate-jpa-2.0-api;1.0.1.Final [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies computer-database#computer-database_2.10;1.0->joda-time#joda-time;2.3 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies computer-database#computer-database_2.10;1.0->joda-time#joda-time;2.3 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies computer-database#computer-database_2.10;1.0->joda-time#joda-time;2.3 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies computer-database#computer-database_2.10;1.0->joda-time#joda-time;2.3 [compile->master][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies computer-database#computer-database_2.10;1.0->com.typesafe.play#play_2.10;2.2.1 [compile->default(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies computer-database#computer-database_2.10;1.0->com.typesafe.play#play-java_2.10;2.2.1 [compile->default(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies computer-database#computer-database_2.10;1.0->com.typesafe.play#play-test_2.10;2.2.1 [test->default(compile)][0m
@@ -4482,6 +4583,11 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-datacommons_2.10;2.2.1->org.scala-lang#scala-library;2.10.2 [compile->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-datacommons_2.10;2.2.1->org.scala-lang#scala-library;2.10.2 [compile->master][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-json_2.10;2.2.1->joda-time#joda-time;2.2 [compile->default(compile)][0m
+[0m[[0minfo[0m] [0mResolving joda-time#joda-time;2.2 ...[0m
+[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: joda-time#joda-time;2.2 {compile=[default(compile)]}[0m
+[0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: joda-time#joda-time;2.2[0m
+[0m[[0mdebug[0m] [0m	local: revision in cache: joda-time#joda-time;2.2[0m
+[0m[[0mdebug[0m] [0m	found joda-time#joda-time;2.2 in sbt-chain[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-json_2.10;2.2.1->joda-time#joda-time;2.2 [compile->runtime][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-json_2.10;2.2.1->joda-time#joda-time;2.2 [compile->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-json_2.10;2.2.1->joda-time#joda-time;2.2 [compile->master][0m
@@ -4880,6 +4986,12 @@
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-lang#scala-library;2.10.2!scala-library.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] com.typesafe.play#play-java-jdbc_2.10;2.2.1!play-java-jdbc_2.10.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] com.typesafe.play#play-java-ebean_2.10;2.2.1!play-java-ebean_2.10.jar[0m
+[0m[[0mdebug[0m] [0m		tried http://repo1.maven.org/maven2/joda-time/joda-time/2.3/joda-time-2.3.jar[0m
+[0m[[0minfo[0m] [0mdownloading http://repo1.maven.org/maven2/joda-time/joda-time/2.3/joda-time-2.3.jar ...[0m
+[0m[[0mdebug[0m] [0m	public: downloading http://repo1.maven.org/maven2/joda-time/joda-time/2.3/joda-time-2.3.jar[0m
+[0m[[0mdebug[0m] [0m	public: downloading http://repo1.maven.org/maven2/joda-time/joda-time/2.3/joda-time-2.3.jar.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for http://repo1.maven.org/maven2/joda-time/joda-time/2.3/joda-time-2.3.jar[0m
+[0m[[0minfo[0m] [0m	[SUCCESSFUL ] joda-time#joda-time;2.3!joda-time.jar (7786ms)[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] com.typesafe.play#play_2.10;2.2.1!play_2.10.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] com.typesafe.play#play-java_2.10;2.2.1!play-java_2.10.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] com.typesafe.play#play-jdbc_2.10;2.2.1!play-jdbc_2.10.jar[0m
@@ -5000,7 +5112,7 @@
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-lang#scala-compiler;2.10.2!scala-compiler.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-lang#jline;2.10.2!jline.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.fusesource.jansi#jansi;1.4!jansi.jar[0m
-[0m[[0mdebug[0m] [0m:: resolution report :: resolve 1241ms :: artifacts dl 160ms[0m
+[0m[[0mdebug[0m] [0m:: resolution report :: resolve 8446ms :: artifacts dl 8154ms[0m
 [0m[[0mdebug[0m] [0m	report for computer-database#computer-database_2.10;1.0 compile produced in D:\Projects\gametracker-forms\target\resolution-cache\reports\computer-database-computer-database_2.10-compile.xml[0m
 [0m[[0mdebug[0m] [0m	report for computer-database#computer-database_2.10;1.0 runtime produced in D:\Projects\gametracker-forms\target\resolution-cache\reports\computer-database-computer-database_2.10-runtime.xml[0m
 [0m[[0mdebug[0m] [0m	report for computer-database#computer-database_2.10;1.0 test produced in D:\Projects\gametracker-forms\target\resolution-cache\reports\computer-database-computer-database_2.10-test.xml[0m
@@ -5014,5 +5126,5 @@
 [0m[[0mdebug[0m] [0m	report for computer-database#computer-database_2.10;1.0 docs produced in D:\Projects\gametracker-forms\target\resolution-cache\reports\computer-database-computer-database_2.10-docs.xml[0m
 [0m[[0mdebug[0m] [0m	report for computer-database#computer-database_2.10;1.0 pom produced in D:\Projects\gametracker-forms\target\resolution-cache\reports\computer-database-computer-database_2.10-pom.xml[0m
 [0m[[0mdebug[0m] [0m	report for computer-database#computer-database_2.10;1.0 scala-tool produced in D:\Projects\gametracker-forms\target\resolution-cache\reports\computer-database-computer-database_2.10-scala-tool.xml[0m
-[0m[[0mdebug[0m] [0m	resolve done (1241ms resolve - 160ms download)[0m
+[0m[[0mdebug[0m] [0m	resolve done (8446ms resolve - 8154ms download)[0m
 [0m[[0minfo[0m] [0mDone updating.[0m

@@ -1,4 +1,4 @@
-@(wantedGames: List[Game], ownedGames: List[Game], user: User)
+@(error: String, wantedGames: List[Game], ownedGames: List[Game], user: User)
 
 @import helper._
 
@@ -12,6 +12,12 @@
 @main(user) {
     
     <h1 class="text-info">@Messages("wantedGames.list.title", wantedGames.size)</h1>
+    
+    @if(error) {
+      <div class="alert alert-danger">
+        <strong>Error!</strong> @error
+      </div>
+    }
     
     @if(flash.containsKey("success")) {
       <div class="alert alert-success">
@@ -69,7 +75,7 @@
 
                 @for(game <- ownedGames) {
                     <tr>
-                        <td><a href="">@game.title</a></td>
+                        <td>@game.title</td>
                     </tr>
                 }
 

@@ -39,14 +39,11 @@ Seq[Any](format.raw/*1.46*/("""
   """),_display_(Seq[Any](/*11.4*/form(routes.Games.update(id))/*11.33*/ {_display_(Seq[Any](format.raw/*11.35*/("""
   
     """),_display_(Seq[Any](/*13.6*/checkbox(gameForm("owned"), '_label -> "Owned"))),format.raw/*13.53*/("""
-          
-    <div class="actions">
-      <button type="submit" class="btn btn-success">Save this game</button> or 
-      <a href=""""),_display_(Seq[Any](/*17.17*/routes/*17.23*/.Games.list())),format.raw/*17.36*/("""" class="btn btn-default">Cancel</a> 
-    </div>
+    <button type="submit" class="btn btn-success">Save this game</button> or 
+    <a href=""""),_display_(Seq[Any](/*15.15*/routes/*15.21*/.Games.list())),format.raw/*15.34*/("""" class="btn">Cancel</a>
         
-  """)))})),format.raw/*20.4*/("""  
-""")))})),format.raw/*21.2*/("""
+  """)))})),format.raw/*17.4*/("""  
+""")))})),format.raw/*18.2*/("""
 """))}
     }
     
@@ -59,11 +56,11 @@ Seq[Any](format.raw/*1.46*/("""
 }
                 /*
                     -- GENERATED --
-                    DATE: Fri Jan 10 20:53:45 EST 2014
+                    DATE: Tue Jan 14 09:55:11 EST 2014
                     SOURCE: D:/Projects/gametracker-forms/app/views/editForm.scala.html
-                    HASH: 8a2ddb9d8e651dff2b7b18d61f1eb9159fd7626b
-                    MATRIX: 791->1|938->70|970->94|1054->45|1084->67|1113->148|1153->154|1171->164|1210->166|1302->223|1340->252|1380->254|1426->265|1495->312|1669->450|1684->456|1719->469|1814->533|1850->538
-                    LINES: 26->1|29->5|29->5|30->1|32->4|33->5|35->7|35->7|35->7|39->11|39->11|39->11|41->13|41->13|45->17|45->17|45->17|48->20|49->21
+                    HASH: f4f79085528876c7f5add53342b9d5dd920d2a5c
+                    MATRIX: 791->1|938->70|970->94|1054->45|1084->67|1113->148|1153->154|1171->164|1210->166|1302->223|1340->252|1380->254|1426->265|1495->312|1626->407|1641->413|1676->426|1746->465|1782->470
+                    LINES: 26->1|29->5|29->5|30->1|32->4|33->5|35->7|35->7|35->7|39->11|39->11|39->11|41->13|41->13|43->15|43->15|43->15|45->17|46->18
                     -- GENERATED --
                 */
             

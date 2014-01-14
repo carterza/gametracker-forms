@@ -11,11 +11,8 @@
   @form(routes.Games.update(id)) {
   
     @checkbox(gameForm("owned"), '_label -> "Owned")
-          
-    <div class="actions">
-      <button type="submit" class="btn btn-success">Save this game</button> or 
-      <a href="@routes.Games.list()" class="btn btn-default">Cancel</a> 
-    </div>
+    <button type="submit" class="btn btn-success">Save this game</button> or 
+    <a href="@routes.Games.list()" class="btn">Cancel</a>
         
   }  
 }

@@ -24,6 +24,7 @@ create table vote (
   id                        bigint not null,
   game_id                   bigint not null,
   created_by_email          varchar(255),
+  created                   timestamp not null,
   constraint pk_vote primary key (id))
 ;
 

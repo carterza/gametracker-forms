@@ -1,5 +1,10 @@
 package controllers;
 
+import java.util.List;
+
+import org.joda.time.DateTime;
+
+import play.Logger;
 import play.Routes;
 import play.mvc.*;
 import play.data.*;
@@ -35,6 +40,7 @@ public class Games extends Controller {
     public static Result list() {
         return ok(
             list.render(
+                null,
                 Game.list(false),
                 Game.list(true),
                 User.find.byId(request().username())
@@ -65,6 +71,7 @@ public class Games extends Controller {
         DynamicForm requestData = form().bindFromRequest();
         Game game = Game.find.ref(id);
         game.owned = Boolean.parseBoolean(requestData.get("owned"));
+
         game.update();
         flash("success", "Game " + game.title + " has been updated");
         return GO_HOME;
@@ -88,8 +95,30 @@ public class Games extends Controller {
         if(gameForm.hasErrors()) {
             return badRequest(createForm.render(gameForm, User.find.byId(request().username())));
         }
+        
+        DateTime midnight = new DateTime().toDateMidnight().toDateTime();
+        
+        User user = User.find.byId(request().username());
+        
+        List<Game> gamesCreated = Game.find.where()
+                                    .eq("createdBy.email", user.email)
+                                    .between("created", midnight, midnight.plusDays(1))
+                                    .findList();
+                                    
+        List<Vote> votesCast = Vote.find.where()
+                                .eq("createdBy.email", user.email)
+                                .between("created", midnight, midnight.plusDays(1))
+                                .findList();
+
+        if(gamesCreated.size() > 0 || votesCast.size() > 0) {
+            gameForm.reject("You have already created a game or cast a vote today");
+            return ok(
+                createForm.render(gameForm, user)
+            );
+        }
+        
         Game game = gameForm.get();
-        game.votes.add(new Vote());
+        game.votes.add(new Vote(user));
         game.save();
         flash("success", "Game " + gameForm.get().title + " has been created");
         return GO_HOME;
@@ -99,9 +128,35 @@ public class Games extends Controller {
      * Handle the 'vote form' submission 
      */
     public static Result vote(Long id) {
+        DateTime midnight = new DateTime().toDateMidnight().toDateTime();
+        
+        User user = User.find.byId(request().username());
+        
+        List<Game> gamesCreated = Game.find.where()
+                                    .eq("createdBy.email", user.email)
+                                    .between("created", midnight, midnight.plusDays(1))
+                                    .findList();
+                                    
+        List<Vote> votesCast = Vote.find.where()
+                                .eq("createdBy.email", user.email)
+                                .between("created", midnight, midnight.plusDays(1))
+                                .findList();
+
+        if(gamesCreated.size() > 0 || votesCast.size() > 0) {
+            return ok(
+                list.render(
+                    "You have already created a game or cast a vote today",
+                    Game.list(false),
+                    Game.list(true),
+                    User.find.byId(request().username())
+                )
+            );
+        }
+    
         Game game = Game.find.ref(id);
-        game.votes.add(new Vote());
+        game.votes.add(new Vote(user));
         game.update();
+        flash("success", "Game " + game.title + " has been voted for");
         return GO_HOME;
     }
 

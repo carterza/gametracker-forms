@@ -83,11 +83,11 @@ public class Game extends Model {
     }
     
     public String validate() {
-        List<Game> existingGames = Game.find.where()
+        List<Game> duplicateGames = Game.find.where()
                                     .eq("title", title)
                                     .findList();
                                     
-        if (existingGames.size() > 0) {
+        if (duplicateGames.size() > 0) {
             return "A game with that title already exists";
         }
         
