@@ -1,6 +1,0 @@
-# Messages
-
-wantedGames.list.title={0,choice,0#No wanted games|1#One wanted game|1<{0,number,integer} wanted games} found
-ownedGames.list.title={0,choice,0#No owned games|1#One owned game|1<{0,number,integer} owned games} found
-
-
