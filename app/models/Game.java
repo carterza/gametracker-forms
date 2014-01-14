@@ -1,5 +1,7 @@
 package models;
 
+import org.joda.time.DateTime;
+
 import java.sql.Timestamp;
 import java.util.*;
 import javax.persistence.*;
@@ -60,6 +62,19 @@ public class Game extends Model {
         }
         
         return games;
+    }
+    
+    /**
+      * Find games created by user in last twenty-four hours
+      * @param email E-mail address of user
+    */
+    public static List<Game> findCreatedTodayByEmail(String email) {
+        DateTime midnight = new DateTime().toDateMidnight().toDateTime();
+        
+        return find.where()
+                .eq("createdBy.email", email)
+                .between("created", midnight, midnight.plusDays(1))
+                .findList();
     }
     
     /**

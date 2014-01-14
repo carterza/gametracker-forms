@@ -2,8 +2,6 @@ package controllers;
 
 import java.util.List;
 
-import org.joda.time.DateTime;
-
 import play.Logger;
 import play.Routes;
 import play.mvc.*;
@@ -15,27 +13,27 @@ import views.html.*;
 import models.*;
 
 /**
- * Manage game related operations.
+ * Manage game related operations
  */
 @Security.Authenticated(Secured.class)
 public class Games extends Controller {
     
     /**
-     * This result directly redirects to the application home.
+     * This result directly redirects to the application home
      */
     public static Result GO_HOME = redirect(
         routes.Games.list()
     );
     
     /**
-     * Handle default path requests, redirect to games list.
+     * Handle default path requests, redirect to games list
      */
     public static Result index() {
         return GO_HOME;
     }
 
     /**
-     * Display the lists of games.
+     * Display the lists of games
      */
     public static Result list() {
         return ok(
@@ -49,7 +47,7 @@ public class Games extends Controller {
     }
     
     /**
-     * Display the 'edit form' of a existing Game.
+     * Display the 'edit form' of a existing Game
      *
      * @param id Id of the game to edit
      */
@@ -78,7 +76,7 @@ public class Games extends Controller {
     }
     
     /**
-     * Display the 'new game form'.
+     * Display the 'new game form'
      */
     public static Result create() {
         Form<Game> gameForm = form(Game.class);
@@ -96,19 +94,11 @@ public class Games extends Controller {
             return badRequest(createForm.render(gameForm, User.find.byId(request().username())));
         }
         
-        DateTime midnight = new DateTime().toDateMidnight().toDateTime();
-        
         User user = User.find.byId(request().username());
         
-        List<Game> gamesCreated = Game.find.where()
-                                    .eq("createdBy.email", user.email)
-                                    .between("created", midnight, midnight.plusDays(1))
-                                    .findList();
+        List<Game> gamesCreated = Game.findCreatedTodayByEmail(user.email);
                                     
-        List<Vote> votesCast = Vote.find.where()
-                                .eq("createdBy.email", user.email)
-                                .between("created", midnight, midnight.plusDays(1))
-                                .findList();
+        List<Vote> votesCast = Vote.findCreatedTodayByEmail(user.email);
 
         if(gamesCreated.size() > 0 || votesCast.size() > 0) {
             gameForm.reject("You have already created a game or cast a vote today");
@@ -128,19 +118,11 @@ public class Games extends Controller {
      * Handle the 'vote form' submission 
      */
     public static Result vote(Long id) {
-        DateTime midnight = new DateTime().toDateMidnight().toDateTime();
-        
         User user = User.find.byId(request().username());
         
-        List<Game> gamesCreated = Game.find.where()
-                                    .eq("createdBy.email", user.email)
-                                    .between("created", midnight, midnight.plusDays(1))
-                                    .findList();
+        List<Game> gamesCreated = Game.findCreatedTodayByEmail(user.email);
                                     
-        List<Vote> votesCast = Vote.find.where()
-                                .eq("createdBy.email", user.email)
-                                .between("created", midnight, midnight.plusDays(1))
-                                .findList();
+        List<Vote> votesCast = Vote.findCreatedTodayByEmail(user.email);
 
         if(gamesCreated.size() > 0 || votesCast.size() > 0) {
             return ok(
