@@ -10,8 +10,9 @@ import views.html.*;
 
 public class Application extends Controller {
   
-    // -- Authentication
-    
+    /**
+     * Class for binding login form
+     */
     public static class Login {
         
         public String email;
@@ -27,7 +28,7 @@ public class Application extends Controller {
     }
 
     /**
-     * Login page.
+     * Login page
      */
     public static Result login() {
         return ok(
@@ -36,7 +37,7 @@ public class Application extends Controller {
     }
     
     /**
-     * Handle login form submission.
+     * Handle login form submission
      */
     public static Result authenticate() {
         Form<Login> loginForm = form(Login.class).bindFromRequest();
@@ -51,7 +52,7 @@ public class Application extends Controller {
     }
 
     /**
-     * Logout and clean the session.
+     * Logout and clean session
      */
     public static Result logout() {
         session().clear();
@@ -61,8 +62,9 @@ public class Application extends Controller {
         );
     }
 
-    // -- Javascript routing
-    
+    /**
+     * Enables reverse javascript routing
+     */
     public static Result javascriptRoutes() {
         response().setContentType("text/javascript");
         return ok(

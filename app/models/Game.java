@@ -47,8 +47,7 @@ public class Game extends Model {
     
     /**
      * Return a list of games
-     *
-     * @param owned Filter applied on the owned column
+     * @param owned Filter applied on the owned field
      */
     public static List<Game> list(Boolean owned) {
         List<Game> games = find.fetch("votes")
@@ -65,9 +64,9 @@ public class Game extends Model {
     }
     
     /**
-      * Find games created by user in last twenty-four hours
-      * @param email E-mail address of user
-    */
+     * Find games created by user in last twenty-four hours
+     * @param email E-mail address of user
+     */
     public static List<Game> findCreatedTodayByEmail(String email) {
         DateTime midnight = new DateTime().toDateMidnight().toDateTime();
         
@@ -97,6 +96,9 @@ public class Game extends Model {
         }
     }
     
+    /**
+     * Uniqueness validation
+     */
     public String validate() {
         List<Game> duplicateGames = Game.find.where()
                                     .eq("title", title)

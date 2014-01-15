@@ -2,6 +2,9 @@ package controllers;
 
 import java.util.List;
 
+import org.joda.time.DateTime;
+import org.joda.time.DateTimeConstants;
+
 import play.Logger;
 import play.Routes;
 import play.mvc.*;
@@ -19,7 +22,7 @@ import models.*;
 public class Games extends Controller {
     
     /**
-     * This result directly redirects to the application home
+     * Result to redirect to application home
      */
     public static Result GO_HOME = redirect(
         routes.Games.list()
@@ -94,6 +97,7 @@ public class Games extends Controller {
             return badRequest(createForm.render(gameForm, User.find.byId(request().username())));
         }
         
+        // Check if user has already voted or created a game today
         User user = User.find.byId(request().username());
         
         List<Game> gamesCreated = Game.findCreatedTodayByEmail(user.email);
@@ -107,6 +111,19 @@ public class Games extends Controller {
             );
         }
         
+        // Check if today is a work day
+        if(!isWorkingDay()) {
+            return ok(
+                list.render(
+                    "Games cannot be added on Saturday or Sunday",
+                    Game.list(false),
+                    Game.list(true),
+                    User.find.byId(request().username())
+                )
+            );
+        }
+        
+        // Save new game and add initial vote
         Game game = gameForm.get();
         game.votes.add(new Vote(user));
         game.save();
@@ -115,9 +132,12 @@ public class Games extends Controller {
     }
     
     /**
-     * Handle the 'vote form' submission 
+     * Handle submission of votes
+     *
+     * @param id Id of the game update
      */
     public static Result vote(Long id) {
+        // Check if user has already voted or created a game today
         User user = User.find.byId(request().username());
         
         List<Game> gamesCreated = Game.findCreatedTodayByEmail(user.email);
@@ -134,13 +154,37 @@ public class Games extends Controller {
                 )
             );
         }
-    
+        
+        // Check if today is a work day
+        if(!isWorkingDay()) {
+            return ok(
+                list.render(
+                    "Votes cannot be cast on Saturday or Sunday",
+                    Game.list(false),
+                    Game.list(true),
+                    User.find.byId(request().username())
+                )
+            );
+        }
+        
+        // Add vote to and update existing game
         Game game = Game.find.ref(id);
         game.votes.add(new Vote(user));
         game.update();
         flash("success", "Game " + game.title + " has been voted for");
         return GO_HOME;
     }
-
+    
+    /**
+     * Determine if today is a work day
+     */
+    private static Boolean isWorkingDay() {
+        DateTime dt = new DateTime();
+        Integer dayOfWeek = dt.getDayOfWeek();
+        if(dayOfWeek == DateTimeConstants.SATURDAY || dayOfWeek == DateTimeConstants.SUNDAY) {
+            return false;
+        }
+        return true;
+    }
 }
             
