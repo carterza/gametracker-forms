@@ -31,11 +31,11 @@ public class Global extends GlobalSettings {
                 @SuppressWarnings("unchecked")
                 Map<String,List<Object>> all = (Map<String,List<Object>>)Yaml.load("initial-data.yml");
 
-                // Insert games
-                Ebean.save(all.get("games"));
-                
                 // Insert users
                 Ebean.save(all.get("users"));
+                
+                // Insert games
+                Ebean.save(all.get("games"));
             }
         }
         

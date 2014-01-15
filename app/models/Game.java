@@ -47,6 +47,7 @@ public class Game extends Model {
     
     /**
      * Return a list of games
+     *
      * @param owned Filter applied on the owned field
      */
     public static List<Game> list(Boolean owned) {
@@ -65,6 +66,7 @@ public class Game extends Model {
     
     /**
      * Find games created by user in last twenty-four hours
+     *
      * @param email E-mail address of user
      */
     public static List<Game> findCreatedTodayByEmail(String email) {

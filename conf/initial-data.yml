@@ -1,26 +1,54 @@
 
+# Users
+users:
+  - !!models.User
+      email:    bob@example.com
+      name:     Bob Bobberson
+      password: secret
+  
+  - !!models.User
+      email:    jeff@example.com
+      name:     Jeff Jefferson
+      password: secret
+
 # Games
 games:
   - !!models.Game
     title:      Minecraft
     owned:      false
+    createdBy:  !!models.User
+                  email: jeff@example.com
+    votes:
+      - !!models.Vote
+          createdBy: !!models.User
+                  email: jeff@example.com
 
   - !!models.Game
     title:      Thief
     owned:      false
+    createdBy:  !!models.User
+                  email: jeff@example.com
+    
+  - !!models.Game
+    title:      Grand Theft Auto V
+    owned:      false
+    createdBy:  !!models.User
+                  email: jeff@example.com
 
   - !!models.Game
     title:      Halo 4
     owned:      true
+    createdBy:  !!models.User
+                  email: jeff@example.com
 
   - !!models.Game
     title:      Battlefield 4
     owned:      true
+    createdBy:  !!models.User
+                  email: jeff@example.com
     
-# Users
-users:
-  - !!models.User
-      email:    bob@example.com
-      name:     Bob Bobertson
-      password: secret
-    
+  - !!models.Game
+    title:      Burnout Paradise
+    owned:      true
+    createdBy:  !!models.User
+                  email: jeff@example.com   
