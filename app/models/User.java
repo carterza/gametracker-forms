@@ -54,12 +54,6 @@ public class User extends Model {
             .eq("password", password)
             .findUnique();
     }
-    
-    // --
-    
-    public String toString() {
-        return "User(" + email + ")";
-    }
 
 }
 

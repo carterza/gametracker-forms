@@ -49,6 +49,7 @@ public class Vote extends Model {
                 .between("created", midnight, midnight.plusDays(1))
                 .findList();
       }
+
 }
 
 

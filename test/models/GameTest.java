@@ -9,7 +9,7 @@ import static org.fest.assertions.Assertions.*;
 
 import com.avaje.ebean.*;
 
-public class ModelTest {
+public class GameTest {
     
     @Test
     public void list() {
@@ -57,4 +57,17 @@ public class ModelTest {
             }
         });
     }
+    
+    @Test
+    public void validate() {
+        running(fakeApplication(), new Runnable() {
+            public void run() {
+                Game game = new Game();
+                game.title = "Minecraft";
+                String validationResult =  game.validate();
+                assertThat(validationResult).isEqualTo("A game with that title already exists");
+            }
+        });
+    }
+
 }
