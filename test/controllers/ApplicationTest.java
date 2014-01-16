@@ -1,5 +1,8 @@
 package controllers;
 
+import static play.test.Helpers.*;
+import static org.fest.assertions.Assertions.*;
+
 import org.junit.*;
 
 import com.fasterxml.jackson.databind.JsonNode;
@@ -11,9 +14,6 @@ import play.libs.Json;
 import play.test.FakeRequest;
 
 import models.User;
-
-import static play.test.Helpers.*;
-import static org.fest.assertions.Assertions.*;
 
 public class ApplicationTest {
 
@@ -57,8 +57,8 @@ public class ApplicationTest {
                 FakeRequest request = new FakeRequest(POST, "/login/").withJsonBody(json);
                 
                 Result result = callAction(
-                  controllers.routes.ref.Application.authenticate(),
-                  request
+                    controllers.routes.ref.Application.authenticate(),
+                    request
                 );
                 assertThat(status(result)).isEqualTo(SEE_OTHER);
                 assertThat(redirectLocation(result)).isEqualTo("/");
